@@ -1,0 +1,6 @@
+.Home-header {
+    background-color: #2f3437;
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
