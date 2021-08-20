@@ -2,7 +2,7 @@
 import Head from 'next/head';
 
 export default function MetaTags({
-	title = 'Monad',
+	title = 'Ilios',
 	description = 'Neesh\'s Personal Website',
 	image = '/favicon.svg',
 	favicon = '/favicon.ico',
@@ -13,7 +13,7 @@ export default function MetaTags({
 			<title>{title}</title>
 
 			<meta name='description' content={description} />
-			<link rel='icon' type='image/png' href={image} />
+			<link rel='icon' type='image/favicon.png' href={image} />
 			<meta name='image' content={image} />
 			<meta name='theme-color' content={color} />
 
