@@ -6,8 +6,10 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import styles from '../styles/QuickNav.module.css'
 const navigation = [
   { name: 'About', href: '#about' },
+  { name: 'Resume', href: '/resume'},
   { name: 'Experience', href: '#experience'},
   { name: 'Projects', href: '#projects'},
+  { name: 'Blog', href: '#blog'},
   { name: 'Discord', href: 'https://discord.gg/4Hd8MxuJkv'},
 ]
 
@@ -17,7 +19,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 filter drop-shadow-lg">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">

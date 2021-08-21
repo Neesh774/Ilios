@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       colors: {
         'starOrange': "#ffac33"
+      },
+      fontFamily: {
+        'typewriter': ["Oxygen Mono"]
       }
     },
   },
