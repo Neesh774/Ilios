@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+.quicknav {
+  position: relative;
+  text-decoration: none;
+  padding: 4px 0;
+  transition: 0.3s;
+}
+.quicknav::after {
+  position: absolute;
+  content: "";
+  width: 120%;
+  height: 3px;
+  top: 90%;
+  left: -10%;
+  background: #ffd983;
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.quicknav:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
