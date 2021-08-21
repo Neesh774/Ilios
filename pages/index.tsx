@@ -14,7 +14,7 @@ const Home: NextPage = () => {
           </h1>
           <h2 className="mt-3 text-4xl tracking-tight font-bold text-gray-900 sm:text-2xl md:text-3xl">
             <span className="block xl:inline font-typewriter">I'm a&nbsp;</span>
-            <span className="font-typewriter inline">
+            <span className="font-typewriter inline sm:text-2xl md:text-3xl">
               <Typewriter words={['developer', 'software engineer', 'pianist', 'tennis player', 'student']}/>
             </span>
           </h2>

@@ -1,11 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
 import styles from '../styles/QuickNav.module.css'
 const navigation = [
-  { name: 'About', href: '#about' },
+  { name: 'About', href: 'about' },
   { name: 'Resume', href: '/resume'},
   { name: 'Experience', href: '#experience'},
   { name: 'Projects', href: '#projects'},
@@ -23,7 +23,7 @@ export default function Example() {
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-            <div className="relative flex items-center justify-between h-10">
+            <div className="relative flex items-center justify-between h-16">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -36,17 +36,19 @@ export default function Example() {
                 </Disclosure.Button>
               </div>
               <div className="flex-1 h-full flex items-center justify-center sm:items-stretch sm:justify-start">
-                <button className="flex-shrink-0 flex items-center space-x-2" href="/">
-                  <img
-                    className="block h-6 w-auto"
-                    src="/favicon.svg"
-                    alt="Star"
-                  />
-                  <div
-                    className="block w-auto text-gray-300 text-xl"
-                  >Ilios</div>
-                </button>
-                <div className="hidden sm:block sm:ml-6 mt-2">
+                <Link className="flex-shrink-0 flex items-center space-x-2" href="/" passHref>
+                    <div className="flex-shrink-0 flex items-center space-x-2">
+                    <img
+                      className="block h-6 w-auto"
+                      src="/favicon.svg"
+                      alt="Star"
+                    />
+                    <div
+                      className="block w-auto text-gray-300 text-2xl"
+                    >Ilios</div>
+                  </div>
+                </Link>
+                <div className="hidden sm:block sm:ml-6 mt-4">
                   <div className="flex space-x-4">
                     {navigation.map((item) => (
                       <a
@@ -54,7 +56,7 @@ export default function Example() {
                         href={item.href}
                         className={classNames(
                           'text-gray-300 hover:text-starOrange',
-                          'p-3 py-2 rounded-md text-sm font-medium quick-nav',
+                          'p-3 py-2 rounded-md text-lg font-medium quick-nav',
                           styles.quicknav
                         )}
                       >
