@@ -56,7 +56,7 @@ export default function Example() {
                         href={item.href}
                         className={classNames(
                           'text-gray-300 hover:text-starOrange',
-                          'p-3 py-2 rounded-md text-lg font-medium quick-nav',
+                          'p-3 py-2 rounded-md text-xl font-medium quick-nav',
                           styles.quicknav
                         )}
                       >
