@@ -23,7 +23,7 @@ const Home: NextPage = () => {
         </div>
         <div className="mt-32 mx-auto">
           <img
-            className="w-60 h-60 rounded-full mx-auto"
+            className="w-60 h-60 rounded-full mx-auto sm:animate-bounce"
             src={avatarURL}
             alt=""
           />

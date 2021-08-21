@@ -3,6 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      animation: {
+        'bounce': 'bounce 1.5s infinite'
+      },
       colors: {
         'starOrange': "#ffac33"
       },
