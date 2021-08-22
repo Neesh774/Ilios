@@ -3,19 +3,36 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      keyframes: {
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-10px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          },
+        }
+      },
       animation: {
-        'bounce': 'bounce 1.5s infinite'
+        'bounce': 'bounce 1.5s infinite',
+        'fade-in-down': 'fade-in-down 0.5s ease-out'
       },
       colors: {
-        'starOrange': "#ffac33"
+        'starOrange': "#ffac33",
+        'lightOrange': "#ffd983"
       },
       fontFamily: {
         'typewriter': ["Oxygen Mono"]
       }
     },
   },
-  variants: {
-    extend: {},
-  },
   plugins: [],
+  variants: {
+    extend: {
+      fontSize: ['hover'],
+      animation: ['hover'],
+    },
+  },
 }

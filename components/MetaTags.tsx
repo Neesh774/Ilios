@@ -4,7 +4,7 @@ import Head from 'next/head';
 export default function MetaTags({
 	title = 'Ilios',
 	description = 'Neesh\'s Personal Website',
-	image = '/favicon.svg',
+	image = '/favicon.png',
 	favicon = '/favicon.ico',
 	color = '#0B172A',
 }) {
@@ -14,7 +14,7 @@ export default function MetaTags({
 
 			<meta name='description' content={description} />
 			<link rel='icon' type='image/favicon.png' href={image} />
-			<meta name='image' content={image} />
+			<meta name='image' content={image} />	
 			<meta name='theme-color' content={color} />
 
             <meta name='twitter:card' content='summary' />

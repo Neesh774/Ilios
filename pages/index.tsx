@@ -2,7 +2,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from 'next'
 import MetaTags from '../components/MetaTags'
+import Languages from '../components/Languages'
 import {Typewriter} from 'typewriting-react'
+
 const Home: NextPage = () => {
   const avatarURL = "https://media.discordapp.net/attachments/834443815205077032/878728732234358784/image0.jpg?width=536&height=536";
   return (
@@ -21,12 +23,25 @@ const Home: NextPage = () => {
             </span>
           </div>
         </div>
-        <div className="mt-32 mx-auto">
+        <div className="mt-16 mb-16 sm:mt-32 mx-auto">
           <img
             className="w-60 h-60 rounded-full mx-auto sm:animate-bounce"
             src={avatarURL}
             alt=""
           />
+        </div>
+      </div>
+      <div id="about" className="bg-lightOrange text-center">
+        <div className="sm:py-32 md:px-32 md:p-12 space-y-4 mx-auto">
+          <div className= "text-2xl font-bold tracking-tight px-4">
+            Nice to meet you! The name's Kanishq.
+          </div>
+          <div className="px-4">
+            Ever since I was a kid, I've loved programming. Now, I've been coding for over 6 years, and I'm still a sophomore in high school! I love solving difficult problems and learning new languages.
+          </div>
+          <div className=" flex">
+            <Languages />
+          </div>
         </div>
       </div>
     </>

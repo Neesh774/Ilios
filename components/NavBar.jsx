@@ -5,7 +5,7 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 import styles from '../styles/QuickNav.module.css'
 const navigation = [
-  { name: 'About', href: 'about' },
+  { name: 'About', href: '/#about' },
   { name: 'Resume', href: '/resume'},
   { name: 'Experience', href: '#experience'},
   { name: 'Projects', href: '#projects'},
