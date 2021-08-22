@@ -3,6 +3,7 @@
 import type { NextPage } from 'next'
 import MetaTags from '../components/MetaTags'
 import Languages from '../components/Languages'
+import Socials from '../components/Socials'
 import {Typewriter} from 'typewriting-react'
 
 const Home: NextPage = () => {
@@ -41,6 +42,9 @@ const Home: NextPage = () => {
           </div>
           <div className=" flex">
             <Languages />
+          </div>
+          <div className="flex">
+            <Socials />
           </div>
         </div>
       </div>
