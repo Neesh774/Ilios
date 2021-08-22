@@ -6,37 +6,37 @@ const Languages:NextPage = () => {
     return (
         <div className="md:flex mt-4 animate-fade-in-down mx-auto text-4xl md:space-x-4 space-y-4 md:space-y-0 ">
             <div className="space-x-4 flex">    
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://reactjs.org">
                     <RiReactjsFill/>
-                </div>
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                </a>
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.w3schools.com/html/html_intro.asp">
                     <RiHtml5Fill/>
-                </div>
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                </a>
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.w3schools.com/Css/css_intro.asp">
                     <RiCss3Fill/>
-                </div>
+                </a>
             </div>
             <div className="space-x-4 flex">
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://flutter.dev">
                     <RiFlutterFill/>
-                </div>
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                </a>
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://nextjs.org">
                     <SiNextDotJs/>
-                </div>
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                </a>
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.java.com/en/">
                     <SiJava/>
-                </div>
+                </a>
             </div>
             <div className="space-x-4 flex">
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.w3schools.com/js/js_intro.asp">
                     <SiJavascript/>
-                </div>
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                </a>
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.python.org">
                     <SiPython/>
-                </div>
-                <div className="hover:text-5xl transition-all ease-in-out duration-300">
+                </a>
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.w3schools.com/cs/cs_intro.php">
                     <SiCsharp/>
-                </div>
+                </a>
             </div>
             
         </div>
