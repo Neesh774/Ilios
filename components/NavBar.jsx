@@ -37,15 +37,15 @@ export default function Example() {
               </div>
               <div className="flex-1 h-full flex items-center justify-center sm:items-stretch sm:justify-start">
                 <Link className="flex-shrink-0 flex items-center space-x-2" href="/" passHref>
-                    <div className="flex-shrink-0 flex items-center space-x-2">
+                  <div className="flex-shrink-0 flex items-center space-x-2">
                     <img
                       className="block h-6 w-auto"
                       src="/favicon.svg"
                       alt="Star"
                     />
-                    <div
+                    <a
                       className="block w-auto text-gray-300 text-2xl"
-                    >Ilios</div>
+                    >Ilios</a>
                   </div>
                 </Link>
                 <div className="hidden sm:block sm:ml-6 mt-4">
