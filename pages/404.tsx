@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link'
+import styles from '../styles/QuickNav.module.css'
 
 export default function FourOhFour() {
   return (
@@ -13,7 +13,7 @@ export default function FourOhFour() {
                     Looks like you got lost!&nbsp;
                 </div>
                 <Link href="/" passHref>
-                    <a className="text-3xl">
+                    <a className="text-3xl underline border-b-4 border-starOrange styles.quicknav">
                         Here&apos;s the path home.
                     </a>
                 </Link>

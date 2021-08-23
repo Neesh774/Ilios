@@ -1,15 +1,15 @@
 /* eslint-disable @next/next/no-img-element */
 /* This example requires Tailwind CSS v2.0+ */
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 import styles from '../styles/QuickNav.module.css'
 const navigation = [
   { name: 'About', href: '/#about' },
-  { name: 'Resume', href: '/resume'},
   { name: 'Experience', href: '/#experience'},
   { name: 'Projects', href: '/#projects'},
-  { name: 'Blog', href: '/#blog'},
+  { name: 'Resume', href: '/resume'},
+  { name: 'Blog', href: '/blog'},
   { name: 'Discord', href: 'https://discord.gg/4Hd8MxuJkv'},
 ]
 

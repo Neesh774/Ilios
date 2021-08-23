@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             Nice to meet you!
           </div>
           <div className="px-4">
-            Ever since I was a kid, I've loved programming. Now, I've been coding for over 6 years, and I'm just a sophomore in high school! I love solving difficult problems and learning new languages.
+            Ever since I was a kid, I've loved programming. Now, I've been coding for over 6 years, and I'm just a junior in high school! I love solving difficult problems and learning new languages.
           </div>
           <div className=" flex">
             <Languages />
