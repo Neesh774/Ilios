@@ -7,9 +7,9 @@ import styles from '../styles/QuickNav.module.css'
 const navigation = [
   { name: 'About', href: '/#about' },
   { name: 'Resume', href: '/resume'},
-  { name: 'Experience', href: '#experience'},
-  { name: 'Projects', href: '#projects'},
-  { name: 'Blog', href: '#blog'},
+  { name: 'Experience', href: '/#experience'},
+  { name: 'Projects', href: '/#projects'},
+  { name: 'Blog', href: '/#blog'},
   { name: 'Discord', href: 'https://discord.gg/4Hd8MxuJkv'},
 ]
 
