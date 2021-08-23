@@ -1,1 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Oxygen+Mono');
+:root {
+    scroll-behavior: smooth;
+}

@@ -18,7 +18,7 @@ module.exports = {
       animation: {
         'bounce': 'bounce 1.5s infinite',
         'fade-in-down': 'fade-in-down 0.5s ease-out',
-        'spin': 'spin 1.5s infinite'
+        'spin': 'spin 1.5s'
       },
       colors: {
         'starOrange': "#ffac33",

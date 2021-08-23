@@ -5,7 +5,6 @@ import MetaTags from '../components/MetaTags'
 import Languages from '../components/Languages'
 import Socials from '../components/Socials'
 import {Typewriter} from 'typewriting-react'
-
 const Home: NextPage = () => {
   const avatarURL = "https://media.discordapp.net/attachments/834443815205077032/878728732234358784/image0.jpg?width=536&height=536";
   return (
