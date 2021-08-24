@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { getDatabase, getPage, getBlocks } from "../../lib/notion.js";
+import Link from 'next/link'
 import ReactTimeAgo from 'react-time-ago'
 
 import Text from '../../components/Text'
@@ -82,7 +83,9 @@ export default function Post({ page, blocks }) {
             Created&nbsp;<ReactTimeAgo date={page.properties.Created.created_time} locale="en" />
           </div>
         </div>
-        <a className="text-lg font-bold" href="/blog">←Back to Blogs</a>
+        <Link href="/blog">
+          <a className="text-lg font-bold">←Back to Blogs</a>
+        </Link>
       </div>
       <div className="pt-4">
         {blocks.map((block) => (
