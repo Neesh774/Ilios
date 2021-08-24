@@ -23,6 +23,7 @@ module.exports = {
       colors: {
         'starOrange': "#ffac33",
         'lightOrange': "#ffd983",
+        'code': '#f2f2f2'
       },
       fontFamily: {
         'typewriter': ["Oxygen Mono"]

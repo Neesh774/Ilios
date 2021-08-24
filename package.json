@@ -11,10 +11,13 @@
   "dependencies": {
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.4",
+    "@notionhq/client": "^0.3.0",
+    "javascript-time-ago": "^2.3.8",
     "next": "11.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
+    "react-time-ago": "^7.1.1",
     "typewriting-react": "^1.0.8"
   },
   "devDependencies": {
