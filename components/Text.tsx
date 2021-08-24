@@ -19,7 +19,7 @@ const Text = ({ text }) => {
         ].join(" ")}
         style={color !== "default" ? { color } : {}}
       >
-        {text.link ? <a href={text.link.url}>{text.content}</a> : text.content}
+        {text.link ? <a href={text.link.url} className="underline hover:text-starOrange transition-all ease-in-out duration-100">{text.content}</a> : text.content}
       </span>
     );
   });
