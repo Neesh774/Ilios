@@ -87,12 +87,17 @@ export default function Post({ page, blocks }) {
           <a className="text-lg font-bold">←Back to Blogs</a>
         </Link>
       </div>
-      <div className="pt-4">
+      <div className="py-4">
         {blocks.map((block) => (
-          <div key={block.id} className="pt-2">
+          <div key={block.id} className="pt-2 md:mx-72 sm:mx-48 mx-4">
             <Fragment>{renderBlock(block)}</Fragment>
           </div>
         ))}
+      </div>
+      <div className="p-5 flex justify-center">
+        <Link href="/blog">
+          <a className="bg-starOrange text-white font-bold rounded-md p-3 hover:bg-yellow-500 transition-all ease-in-out duration-100">←Back to Blogs</a>
+        </Link>
       </div>
     </div>
   );
