@@ -1,7 +1,7 @@
 import { getDatabase }from '../../lib/notion'
 import Text from '../../components/Text'
 import ReactTimeAgo from 'react-time-ago'
-
+import { parseISO } from 'date-fns'
 export default function Blog({posts}) {
     return (
         <div className="divide-y-2 divide-gray-500 divide-opacity-60 px-5">
@@ -20,7 +20,7 @@ export default function Blog({posts}) {
                             <div className="text-xl m-2 flex items-center">
                                 <Text text={post.properties.Name.title} />
                                 <div className="text-sm text-gray-500">
-                                    &nbsp;•&nbsp;Created&nbsp;<ReactTimeAgo date={post.properties.Created.created_time} locale="en" />
+                                    &nbsp;•&nbsp;Created&nbsp;<ReactTimeAgo date={parseISO(post.properties.Created.created_time)} locale="en" />
                                 </div>
                             </div>
                             <div className="mx-2 text-sm pb-2 truncate">

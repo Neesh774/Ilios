@@ -2,9 +2,8 @@ import { Fragment } from "react";
 import { getDatabase, getPage, getBlocks, queryDatabase } from "../../lib/notion.js";
 import Link from 'next/link'
 import ReactTimeAgo from 'react-time-ago'
-
+import Date from '../../components/date'
 import Text from '../../components/Text'
-
 const renderBlock = (block) => {
   const { type, id } = block;
   const value = block[type];
@@ -80,7 +79,7 @@ export default function Post({ page, blocks }) {
         <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-700 font-extrabold mt-5 mb-2">
           <Text text={page.properties.Name.title} />
           <div className="text-gray-500 font-normal text-sm">
-            Created&nbsp;<ReactTimeAgo date={page.properties.Created.created_time} locale="en" />
+            Created&nbsp;<Date dateString={page.properties.Created.created_time}/>
           </div>
         </div>
         <Link href="/blog">
@@ -114,9 +113,17 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const slug = context.params;
   const page = await queryDatabase(slug.id);
+  if(!page){
+    //send to 404 page
+    return {
+      props: { 404: true },
+      notFound: true,
+      revalidate: 100,
+  };
+  }
   const blocks = await getBlocks(page.id);
-
-  // Retrieve block children for nested blocks (one level deep), for example toggle blocks
+  
+  // Retrieve block children for nested blocks (one  level deep), for example toggle blocks
   // https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks
   const childBlocks = await Promise.all(
     blocks
