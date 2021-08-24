@@ -6,7 +6,6 @@ import Link from 'next/link'
 import styles from '../styles/QuickNav.module.css'
 const navigation = [
   { name: 'About', href: '/#about' },
-  { name: 'Experience', href: '/#experience'},
   { name: 'Projects', href: '/#projects'},
   { name: 'Resume', href: '/resume'},
   { name: 'Blog', href: '/blog'},

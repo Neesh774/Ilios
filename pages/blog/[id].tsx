@@ -78,8 +78,19 @@ export default function Post({ page, blocks }) {
       <div className="mx-5">
         <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-700 font-extrabold mt-5 mb-2">
           <Text text={page.properties.Name.title} />
-          <div className="text-gray-500 font-normal text-sm">
-            Created&nbsp;<Date dateString={page.properties.Created.created_time}/>
+          <div className="flex space-x-2 m-2">
+            <div className="text-gray-500 font-normal text-sm">
+              Created&nbsp;<Date dateString={page.properties.Created.created_time}/> •
+            </div>
+            {page.properties.Tags.multi_select.map((tag) => (
+                <div key={tag.id}>
+                    <div className={`bg-notion${tag.color} rounded-md`}>
+                        <div className="px-2 py-1 text-xs text-black font-normal">
+                            {tag.name}
+                        </div>
+                    </div>
+                </div>
+            ))}
           </div>
         </div>
         <Link href="/blog">
@@ -103,7 +114,7 @@ export default function Post({ page, blocks }) {
 }
 
 export const getStaticPaths = async () => {
-  const database = await getDatabase(process.env.NOTION_DATABASE_ID);
+  const database = await getDatabase(process.env.NOTION_DATABASE_BLOG_ID);
   return {
     paths: database.map((page) => ({ params: { id: page.id } })),
     fallback: true,
@@ -112,7 +123,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const slug = context.params;
-  const page = await queryDatabase(slug.id);
+  const page = await queryDatabase(slug.id, process.env.NOTION_DATABASE_BLOG_ID);
   if(!page){
     //send to 404 page
     return {

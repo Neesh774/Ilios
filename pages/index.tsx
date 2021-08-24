@@ -45,6 +45,13 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className="text-center">
+        <div className="md-px-32 md:p-12 space-y-4 mx-auto pt-6">
+          <div className="text-3xl font-bold px-4">
+            Recent Work
+          </div>
+        </div>
+      </div>
     </>
   )
 }

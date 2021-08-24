@@ -23,6 +23,17 @@ export default function Blog({posts}) {
                                     &nbsp;•&nbsp;Created&nbsp;<ReactTimeAgo date={parseISO(post.properties.Created.created_time)} locale="en" />
                                 </div>
                             </div>
+                            <div className="flex space-x-2 m-2">
+                                {post.properties.Tags.multi_select.map((tag) => (
+                                    <div key={tag.id}>
+                                        <div className={`bg-notion${tag.color} rounded-md`}>
+                                            <div className="px-2 py-1 text-xs">
+                                                {tag.name}
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                             <div className="mx-2 text-sm pb-2 truncate">
                                 <Text text={post.properties.Description.rich_text} />
                             </div>
@@ -34,7 +45,7 @@ export default function Blog({posts}) {
     )
 }
 export const getStaticProps = async () => {
-    const database = await getDatabase(process.env.NOTION_DATABASE_ID);
+    const database = await getDatabase(process.env.NOTION_DATABASE_BLOG_ID);
     return {
       props: {
         posts: database,

@@ -23,7 +23,17 @@ module.exports = {
       colors: {
         'starOrange': "#ffac33",
         'lightOrange': "#ffd983",
-        'code': '#f2f2f2'
+        'code': '#f2f2f2',
+        'notiondefault': '#e6e6e4',
+        'notiongray': '#d7d7d5',
+        'notionbrown': '#e8d5cc',
+        'notionred': '#ffccd1',
+        'notionorange': '#fddfcc',
+        'notionyellow': '#fbeecc',
+        'notiongreen': '#cce7e1',
+        'notionblue': '#cce4f9',
+        'notionpurple': '#e1d3f8',
+        'notionpink': '#f8cce6',
       },
       fontFamily: {
         'typewriter': ["Oxygen Mono"]
