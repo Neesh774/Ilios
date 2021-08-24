@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { getDatabase, getPage, getBlocks } from "../../lib/notion.js";
+import { getDatabase, getPage, getBlocks, queryDatabase } from "../../lib/notion.js";
 import Link from 'next/link'
 import ReactTimeAgo from 'react-time-ago'
 
@@ -112,9 +112,9 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  const { id } = context.params;
-  const page = await getPage(id);
-  const blocks = await getBlocks(id);
+  const slug = context.params;
+  const page = await queryDatabase(slug.id);
+  const blocks = await getBlocks(page.id);
 
   // Retrieve block children for nested blocks (one level deep), for example toggle blocks
   // https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks

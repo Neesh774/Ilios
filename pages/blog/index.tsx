@@ -15,7 +15,7 @@ export default function Blog({posts}) {
             </div>
             <div className="">
                 {posts.map((post) => (
-                    <a href={`/blog/${post.id}`} key={post.id}>
+                    <a href={`/blog/${post.properties.Slug.rich_text[0].plain_text}`} key={post.id}>
                         <div className="rounded-md drop-shadow-lg border-2 border-gray-400 hover:border-starOrange my-4 transition-all ease-in-out duration-10">
                             <div className="text-xl m-2 flex items-center">
                                 <Text text={post.properties.Name.title} />
