@@ -4,11 +4,11 @@ import ReactTimeAgo from 'react-time-ago'
 import { parseISO } from 'date-fns'
 
 
-function classNames(...classes) {
+export function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-function tagColor(text) {
+export function tagColor(text) {
     if(text == 'red') return 'bg-notionred';
     else if(text == 'orange') return 'bg-notionorange'
     else if(text == 'yellow') return 'bg-notionyellow'

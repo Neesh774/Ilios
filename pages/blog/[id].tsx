@@ -4,6 +4,7 @@ import Link from 'next/link'
 import ReactTimeAgo from 'react-time-ago'
 import Date from '../../components/date'
 import Text from '../../components/Text'
+import {tagColor, classNames} from './index'
 const renderBlock = (block) => {
   const { type, id } = block;
   const value = block[type];
@@ -84,7 +85,10 @@ export default function Post({ page, blocks }) {
             </div>
             {page.properties.Tags.multi_select.map((tag) => (
                 <div key={tag.id}>
-                    <div className={`bg-notion${tag.color} rounded-md`}>
+                    <div className={classNames(
+                      'roudned-md',
+                      tagColor(tag.color)
+                    )}>
                         <div className="px-2 py-1 text-xs text-black font-normal">
                             {tag.name}
                         </div>
