@@ -2,6 +2,25 @@ import { getDatabase }from '../../lib/notion'
 import Text from '../../components/Text'
 import ReactTimeAgo from 'react-time-ago'
 import { parseISO } from 'date-fns'
+
+
+function classNames(...classes) {
+    return classes.filter(Boolean).join(' ')
+}
+
+function tagColor(text) {
+    if(text == 'red') return 'bg-notionred';
+    else if(text == 'orange') return 'bg-notionorange'
+    else if(text == 'yellow') return 'bg-notionyellow'
+    else if(text == 'green') return 'bg-notiongreen'
+    else if(text == 'blue') return 'bg-notionblue'
+    else if(text == 'purple') return 'bg-notionpurple'
+    else if(text == 'pink') return 'bg-notionpink'
+    else if(text == 'brown') return 'bg-notionbrown'
+    else if(text == 'gray') return 'bg-notiongray'
+    else return 'notiondefault'
+}
+
 export default function Blog({posts}) {
     return (
         <div className="divide-y-2 divide-gray-500 divide-opacity-60 px-5">
@@ -26,7 +45,11 @@ export default function Blog({posts}) {
                             <div className="flex space-x-2 m-2">
                                 {post.properties.Tags.multi_select.map((tag) => (
                                     <div key={tag.id}>
-                                        <div className={`bg-notion${tag.color} rounded-md`}>
+                                        <div className={
+                                            classNames(
+                                                'rounded-md',
+                                                tagColor(tag.color)
+                                            )}>
                                             <div className="px-2 py-1 text-xs">
                                                 {tag.name}
                                             </div>

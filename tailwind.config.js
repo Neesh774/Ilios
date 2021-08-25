@@ -43,6 +43,7 @@ module.exports = {
   plugins: [],
   variants: {
     extend: {
+      display: ['hover'],
       fontSize: ['hover'],
       animation: ['hover'],
     },

@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
-import type { NextPage } from 'next'
 import Languages from '../components/Languages'
 import Socials from '../components/Socials'
+import Projects from '../components/Projects'
 import {Typewriter} from 'typewriting-react'
-const Home: NextPage = () => {
+import {getDatabase} from '../lib/notion'
+
+export default function Home({posts}){
   const avatarURL = "https://media.discordapp.net/attachments/834443815205077032/878728732234358784/image0.jpg?width=536&height=536";
   return (
     <>
@@ -50,10 +52,22 @@ const Home: NextPage = () => {
           <div className="text-3xl font-bold px-4">
             Recent Work
           </div>
+          <Projects posts={[posts]}/>
         </div>
       </div>
     </>
   )
 }
 
-export default Home
+export const getStaticProps = async () => {
+  const database = await getDatabase(process.env.NOTION_DATABASE_PROJECTS_ID);
+  return {
+    props: {
+      posts: database,
+    },
+        // Next.js will attempt to re-generate the page:
+    // - When a request comes in
+    // - At most once every second
+    revalidate: 1, // In seconds
+  };
+};
