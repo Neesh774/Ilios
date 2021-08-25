@@ -46,6 +46,7 @@ module.exports = {
       display: ['hover'],
       fontSize: ['hover'],
       animation: ['hover'],
+      dropShadow: ['hover'],
     },
   },
 }

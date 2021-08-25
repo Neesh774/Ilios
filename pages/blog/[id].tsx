@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { getDatabase, getPage, getBlocks, queryDatabase } from "../../lib/notion.js";
+import { getDatabase, getPage, getBlocks, queryDatabaseSlug } from "../../lib/notion.js";
 import Link from 'next/link'
 import ReactTimeAgo from 'react-time-ago'
 import Date from '../../components/date'
@@ -86,7 +86,7 @@ export default function Post({ page, blocks }) {
             {page.properties.Tags.multi_select.map((tag) => (
                 <div key={tag.id}>
                     <div className={classNames(
-                      'roudned-md',
+                      'rounded-md',
                       tagColor(tag.color)
                     )}>
                         <div className="px-2 py-1 text-xs text-black font-normal">
@@ -127,7 +127,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const slug = context.params;
-  const page = await queryDatabase(slug.id, process.env.NOTION_DATABASE_BLOG_ID);
+  const page = await queryDatabaseSlug(slug.id, process.env.NOTION_DATABASE_BLOG_ID);
   if(!page){
     //send to 404 page
     return {

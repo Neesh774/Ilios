@@ -4,7 +4,7 @@ import Languages from '../components/Languages'
 import Socials from '../components/Socials'
 import Projects from '../components/Projects'
 import {Typewriter} from 'typewriting-react'
-import {getDatabase} from '../lib/notion'
+import {getDatabase, queryDatabaseTime} from '../lib/notion'
 
 export default function Home({posts}){
   const avatarURL = "https://media.discordapp.net/attachments/834443815205077032/878728732234358784/image0.jpg?width=536&height=536";
@@ -32,7 +32,7 @@ export default function Home({posts}){
         </div>
       </div>
       <div id="about" className="bg-lightOrange text-center">
-        <div className="md:px-32 md:p-12 space-y-4 mx-auto pt-6">
+        <div className="md:px-32 md:p-12 space-y-4 mx-auto py-6">
           <div className= "text-2xl font-bold tracking-tight px-4">
             Nice to meet you!
           </div>
@@ -47,12 +47,17 @@ export default function Home({posts}){
           </div>
         </div>
       </div>
-      <div className="text-center">
+      <div className="text-center" id="projects">
         <div className="md-px-32 md:p-12 space-y-4 mx-auto pt-6">
           <div className="text-3xl font-bold px-4">
             Recent Work
           </div>
-          <Projects posts={[posts]}/>
+          <div className="text-lg px-4">
+            I've worked on quite a few projects in the past 6 years. Here are the latest!
+          </div>
+          <div>
+            <Projects posts={[posts]}/>
+          </div>
         </div>
       </div>
     </>
@@ -60,7 +65,7 @@ export default function Home({posts}){
 }
 
 export const getStaticProps = async () => {
-  const database = await getDatabase(process.env.NOTION_DATABASE_PROJECTS_ID);
+  const database = await queryDatabaseTime();
   return {
     props: {
       posts: database,
