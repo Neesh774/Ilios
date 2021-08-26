@@ -77,12 +77,13 @@ export default function Post({ page, blocks }) {
   return (   
     <div className="divide-y-2 divide-gray-500 divide-opacity-60 px-5">
       <div className="mx-5">
-        <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-700 font-extrabold mt-5 mb-2">
+        <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-700 font-extrabold mt-5 mb-1">
           <Text text={page.properties.Name.title} />
-          <div className="flex space-x-2 m-2">
+          <div className="flex space-x-2 mr-2 mt-2">
             <div className="text-gray-500 font-normal text-sm">
-              Created&nbsp;<Date dateString={page.properties.Created.created_time}/> •
+              Created&nbsp;<Date dateString={page.properties.Created.created_time}/>
             </div>
+            <div className="text-gray-500 hidden sm:block text-sm font-normal">•</div>
             {page.properties.Tags.multi_select.map((tag) => (
                 <div key={tag.id}>
                     <div className={classNames(
@@ -97,13 +98,15 @@ export default function Post({ page, blocks }) {
             ))}
           </div>
         </div>
-        <Link href="/blog">
-          <a className="text-lg font-bold">←Back to Blogs</a>
-        </Link>
+        <div className="my-1">
+          <Link href="/blog">
+            <a className="text-lg font-bold">← Back to Blogs</a>
+          </Link>
+        </div>
       </div>
       <div className="py-4">
         {blocks.map((block) => (
-          <div key={block.id} className="pt-2 md:mx-72 sm:mx-48 mx-4">
+          <div key={block.id} className="pt-2 lg:mx-72 sm:mx-36 mx-4">
             <Fragment>{renderBlock(block)}</Fragment>
           </div>
         ))}

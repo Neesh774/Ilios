@@ -8,7 +8,7 @@ export default function Projects({posts}){
         <div>
             <div className="md:flex mx-auto md:space-x-2 justify-center lg:space-x-10">
                 {posts.map((post) => (
-                    <a className=" rounded-3xl my-2 transition-all ease-in-out duration-300 border-black border-2 w-60 h-70 hover:border-starOrange flex mx-auto md:mx-0" key={post.id} href={post.properties.Link.url}>
+                    <a className=" rounded-2xl my-2 transition-all ease-in-out duration-300 border-black border-2 w-60 h-70 hover:border-starOrange flex mx-auto md:mx-0" key={post.id} href={post.properties.Link.url}>
                         {/* <img src={post.properties.Photo.files[0].file? post.properties.Photo.files[0].file.url : post.properties.Photo.files[0].external.url} alt="project image" className="w-10 h-10"/> */}
                         <div className="py-5 overflow-y-hidden space-y-3">
                             <div className="text-2xl font-bold">
