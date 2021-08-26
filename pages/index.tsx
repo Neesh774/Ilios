@@ -55,7 +55,7 @@ export default function Home({posts}){
           <div className="text-lg px-4">
             I've worked on quite a few projects in the past 6 years. Here are the latest!
           </div>
-          <div>
+          <div className="mx-10">
             <Projects posts={[posts]}/>
           </div>
         </div>
