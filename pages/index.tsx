@@ -60,6 +60,24 @@ export default function Home({posts}){
           </div>
         </div>
       </div>
+      <div className="mt-5 bg-lightOrange relative">
+        <div className="bg-gray-800 text-center mx-16 rounded-xl text-white absolute bottom-1/2 drop-shadow-2xl">
+          <div className="lg:px-10 px-5 py-10 lg:grid lg:grid-cols-3 lg:space-x-15 space-y-8 lg:space-y-0">
+            <div className="text-starOrange font-extrabold text-2xl">Want to work together?</div>
+            <div className="text-lg">Let's have a chat. Contact me on Discord or Linkedin.</div>
+              <a href="https://discord.gg/4Hd8MxuJkv" className="border-2 rounded-full px-4 py-2 lg:mx-auto border-starOrange hover:bg-starOrange transition-all ease-in-out duration-300 text-center">
+                <div className="px-4 py-1">
+                  Let's go
+                </div>
+              </a>
+          </div>
+        </div>
+        <div className="py-20 px-40">
+          <div className="text-center text-white text-xl">
+
+          </div>
+        </div>
+      </div>
     </>
   )
 }
