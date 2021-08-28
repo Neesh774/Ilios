@@ -3,8 +3,10 @@
 import Languages from '../components/Languages'
 import Socials from '../components/Socials'
 import Projects from '../components/Projects'
+import FooterSocials from '../components/FooterSocials'
 import {Typewriter} from 'typewriting-react'
-import {getDatabase, queryDatabaseTime} from '../lib/notion'
+import {queryDatabaseTime} from '../lib/notion'
+import {SiNextDotJs, SiTailwindcss} from 'react-icons/si'
 
 export default function Home({posts}){
   const avatarURL = "https://media.discordapp.net/attachments/834443815205077032/878728732234358784/image0.jpg?width=536&height=536";
@@ -60,21 +62,40 @@ export default function Home({posts}){
           </div>
         </div>
       </div>
-      <div className="mt-5 bg-lightOrange relative">
-        <div className="bg-gray-800 text-center mx-16 rounded-xl text-white absolute bottom-1/2 drop-shadow-2xl">
-          <div className="lg:px-10 px-5 py-10 lg:grid lg:grid-cols-3 lg:space-x-15 space-y-8 lg:space-y-0">
-            <div className="text-starOrange font-extrabold text-2xl">Want to work together?</div>
+      <div className="mt-36 bg-lightOrange relative">
+        <div className="bg-gray-800 text-center lg:mx-16 rounded-xl text-white absolute -bottom-1/2 md:bottom-1/2 drop-shadow-2xl ml-auto mr-auto left-16 right-16 lg:left-0 lg:right-0">
+          <div className="lg:px-10 px-5 py-10 md:grid md:grid-cols-3 md:space-x-15 md:align-middle space-y-8 md:space-y-0">
+            <div className="text-starOrange font-extrabold text-2xl">Want to work  together?</div>
             <div className="text-lg">Let's have a chat. Contact me on Discord or Linkedin.</div>
-              <a href="https://discord.gg/4Hd8MxuJkv" className="border-2 rounded-full px-4 py-2 lg:mx-auto border-starOrange hover:bg-starOrange transition-all ease-in-out duration-300 text-center">
-                <div className="px-4 py-1">
-                  Let's go
-                </div>
-              </a>
+            <a href="https://discord.gg/4Hd8MxuJkv" className="flex justify-center border-2 rounded-full px-4 py-2 md:mx-auto border-starOrange hover:bg-starOrange transition-all ease-in-out duration-300 text-center h-14">
+              <div className="lg:px-4 py-1 px-2">
+                Let's go
+              </div>
+            </a>
           </div>
         </div>
-        <div className="py-20 px-40">
-          <div className="text-center text-white text-xl">
-
+        <div className="pb-32 lg:pb-10 lg:py-14 px-40">
+        </div>
+      </div>
+      <div className="bg-lightOrange pt-40 md:pt-10 lg:pt-4">
+        <div className="pb-20 px-12 md:px-40 justify-center">
+          <div className="text-center font-extrabold text-3xl">
+            <div className="mb-4">
+              <img src="/favicon.svg" className="w-20 h-20 mx-auto hover:animate-spin" alt="star"/>
+              <div className="text-white">ツCheesyNeeshツ#8152</div>
+            </div>
+            <FooterSocials />
+            <div className="font-normal text-white text-lg mb-4 mt-8">Handcrafted by me 	&copy;</div>
+            <div className="font-light text-white text-sm flex align-middle justify-center">
+              Built with &nbsp;
+              <a href="https://nextjs.org">
+                <SiNextDotJs className="w-5 h-5"/>
+              </a>
+              &nbsp;and&nbsp; 
+              <a href="https://tailwindcss.com">
+                <SiTailwindcss className="w-5 h-5"/>
+              </a>
+            </div>
           </div>
         </div>
       </div>

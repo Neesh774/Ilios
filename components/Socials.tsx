@@ -1,5 +1,4 @@
-import { RiGithubFill, RiTwitterFill, RiDiscordFill, RiLinkedinBoxFill, RiStackOverflowFill  } from 'react-icons/ri'
-import { SiGmail, } from 'react-icons/si'
+import { RiGithubFill, RiTwitterFill, RiDiscordFill, RiLinkedinBoxFill, RiStackOverflowFill, RiMailLine  } from 'react-icons/ri'
 import type { NextPage } from 'next'
 
 const Languages:NextPage = () => {
@@ -18,7 +17,7 @@ const Languages:NextPage = () => {
             </div>
             <div className="space-x-4 flex">    
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="mailto:kanishq0106@gmail.com">
-                    <SiGmail/>
+                    <RiMailLine/>
                 </a>
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.linkedin.com/in/kanishq-kancharla-390928190/">
                     <RiLinkedinBoxFill/>

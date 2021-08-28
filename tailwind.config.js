@@ -48,7 +48,8 @@ module.exports = {
       animation: ['hover'],
       dropShadow: ['hover'],
       width: ['hover'],
-      height: ['hover']
+      height: ['hover'],
+      borderWidth: ['hover']
     },
   },
 }
