@@ -33,7 +33,7 @@ export default function Home({posts}){
           />
         </div>
       </div>
-      <div id="about" className="bg-lightOrange text-center">
+      <div id="about" className="bg-lightOrange text-center lg:h-80">
         <div className="md:px-32 md:p-12 space-y-4 mx-auto py-6">
           <div className= "text-2xl font-bold tracking-tight px-4">
             Nice to meet you!
@@ -41,7 +41,7 @@ export default function Home({posts}){
           <div className="px-4">
             Ever since I was a kid, I've loved programming. Now, I've been coding for over 6 years, and I'm just a junior in high school! I love solving difficult problems and learning new languages.
           </div>
-          <div className=" flex">
+          <div className="flex">
             <Languages />
           </div>
           <div className="flex">

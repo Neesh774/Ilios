@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 
 const Languages:NextPage = () => {
     return (
-        <div className="md:flex mt-4 animate-fade-in-down mx-auto text-4xl md:space-x-4 space-y-4 md:space-y-0">
+        <div className="md:flex animate-fade-in-down mx-auto text-4xl md:space-x-4 space-y-4 md:space-y-0">
             <div className="space-x-4 flex">   
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://github.com/Neesh774">
                     <RiGithubFill/>

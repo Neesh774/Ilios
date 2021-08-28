@@ -5,7 +5,7 @@ import type { NextPage } from 'next'
 const Languages:NextPage = () => {
     return (
         <div className="md:flex mt-4 animate-fade-in-down mx-auto text-4xl md:space-x-4 space-y-4 md:space-y-0">
-            <div className="space-x-4 flex">    
+            <div className="space-x-4 flex h-12">    
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://reactjs.org">
                     <RiReactjsFill/>
                 </a>
@@ -16,7 +16,7 @@ const Languages:NextPage = () => {
                     <RiCss3Fill/>
                 </a>
             </div>
-            <div className="space-x-4 flex">
+            <div className="space-x-4 flex h-12">
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://flutter.dev">
                     <RiFlutterFill/>
                 </a>
@@ -27,7 +27,7 @@ const Languages:NextPage = () => {
                     <SiJava/>
                 </a>
             </div>
-            <div className="space-x-4 flex">
+            <div className="space-x-4 flex h-12">
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.w3schools.com/js/js_intro.asp">
                     <SiJavascript/>
                 </a>
