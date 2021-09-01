@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "noImplicitAny": false,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/NavBar.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/NavBar.tsx", "pages/api/hello.js"],
   "exclude": ["node_modules"]
 }
