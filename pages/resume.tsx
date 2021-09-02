@@ -1,4 +1,5 @@
-import { RiPhoneFill, RiMailFill,  RiLinkedinFill } from 'react-icons/ri'
+import { RiPhoneFill, RiMailFill,  RiLinkedinFill, RiExternalLinkLine } from 'react-icons/ri'
+import Skills from '../components/Skills'
 export function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
@@ -15,8 +16,8 @@ export default function Blog() {
                 </div>
             </div>
             <div className="flex pt-10 justify-center">
-                <div className="ml-10">
-                    <div>
+                <div className="ml-10 space-y-8">
+                    <div className="space-y-4">
                         <div className="text-2xl font-bold tracking-widest mb-4 text-center">
                             Contact
                         </div>
@@ -41,36 +42,66 @@ export default function Blog() {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="space-y-4">
                         <div className="text-2xl font-bold tracking-widest text-center">
                             Education
                         </div>
-                        <div className="text-lg space-y-2">
-                            <div className="space-x-4 justify-end text-right">
+                        <div className="text-lg">
+                            <div className="space-x-4 justify-end text-right space-y-2">
                                 <div className="uppercase">Class of 2023</div>
                                 <div className="italic">Pomperaug High School</div>
                                 <div className="italic">Southbury, CT</div>
-                                <div>
+                                <div className="space-y-2">
                                     <div className="uppercase font-bold">Relevant Coursework</div>
                                     <div className="italic">AP Computer Science A</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="space-y-4">
                         <div className="text-2xl font-bold tracking-widest text-center">
-                            Certification
+                            Notable Experience
                         </div>
                         <div className="text-lg space-y-2">
-                            <div className="space-x-4 justify-end text-right">
-                                <a className="hover:text-starOrange hover:underline" href="https://cyberagent.newhaven.edu">GenCyber Agent Academy of 2021</a>
+                            <div className="flex justify-end text-right">
+                                <a className="flex space-x-4 hover:text-starOrange hover:underline" href="https://cyberagent.newhaven.edu">
+                                    <div className="">GenCyber Agent Academy of 2021</div>
+                                    <RiExternalLinkLine className="h-7 w-7"/>
+                                </a>
+                            </div>
+                            <div className="flex justify-end text-right">
+                                <a className="flex hover:text-starOrange hover:underline space-x-4" href="https://drive.google.com/file/d/1dmKuJKRBELlbHfDqQTDDFL7jngQHlzYw/view?usp=sharing">
+                                    <div className="">Coursera Certifications</div>
+                                    <RiExternalLinkLine className="h-7 w-7"/>
+                                </a>
+                            </div>
+                            <div className="flex justify-end text-right">
+                                <a className="flex hover:text-starOrange hover:underline space-x-4" href="https://www.joinsaturn.com">
+                                    <div className="">Saturn Ambassador</div>
+                                    <RiExternalLinkLine className="h-7 w-7"/>
+                                </a>
+                            </div>
+                            <div className="flex justify-end text-right">
+                                <a className="flex hover:text-starOrange hover:underline space-x-4" href="https://www.istartvalley.org">
+                                    <div className="">iStart Valley Internship</div>
+                                    <RiExternalLinkLine className="h-7 w-7"/>
+                                </a>
+                            </div>
+                            <div className="flex justify-end text-right">
+                                <a className="flex hover:text-starOrange hover:underline space-x-4" href="https://www.kumon.com">
+                                    <div className="">Kumon Math &amp; Reading</div>
+                                    <RiExternalLinkLine className="h-7 w-7"/>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className="space-y-3">
                         <div className="text-2xl font-bold tracking-widest text-center">
                             Skills
                         </div>
+                        <Skills text="Collaboration" value={6} max={7} type="social"/>
+                        <Skills text="Piano" value={4} max={7} type="social"/>
+                        <Skills text="Public Speaking" value={6} max={7} type="social"/>
                     </div>
                 </div>
                 <div>

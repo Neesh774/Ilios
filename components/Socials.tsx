@@ -1,7 +1,7 @@
 import { RiGithubFill, RiTwitterFill, RiDiscordFill, RiLinkedinBoxFill, RiStackOverflowFill, RiMailLine  } from 'react-icons/ri'
 import type { NextPage } from 'next'
 
-const Languages:NextPage = () => {
+const Socials:NextPage = () => {
     return (
         <div className="md:flex animate-fade-in-down mx-auto text-4xl md:space-x-4 space-y-4 md:space-y-0">
             <div className="space-x-4 flex">   
@@ -30,4 +30,4 @@ const Languages:NextPage = () => {
     )
 }
 
-export default Languages
+export default Socials
