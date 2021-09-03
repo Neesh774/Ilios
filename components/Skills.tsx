@@ -6,7 +6,7 @@ const Skills = (props) => {
     const type = props.type;
     return (
         <div className="mx-auto text-lg md:space-x-4 space-y-4 md:space-y-0 py-2">
-            <div className="flex justify-center">
+            <div className="flex justify-center align-middle text-center space-x-2">
                 {type === 'social' ? <RiGroupFill className="h-6 w-6" /> : <RiCodeSSlashLine className="h-6 w-6" />}
                 <div className="text-gray-800 text-center mb-2 text-xl">{text}</div>
             </div>
@@ -16,7 +16,7 @@ const Skills = (props) => {
                         <div key={i} className="justify-center">
                             <div className={(i < val)? "bg-gray-500 w-7 h-4" : "bg-gray-400 w-7 h-4"}></div>
                         </div>  
-                    ))
+                    ))  
                 }
             </div>
         </div>
