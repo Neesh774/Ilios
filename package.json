@@ -19,6 +19,7 @@
     "react-dom": "17.0.2",
     "react-icons": "^4.2.0",
     "react-time-ago": "^7.1.1",
+    "styled-components": "^5.3.1",
     "typewriting-react": "^1.0.8"
   },
   "devDependencies": {

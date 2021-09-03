@@ -6,7 +6,7 @@ export default function Projects({posts}){
     posts = posts[0];
     return (
         <div>
-            <div className="md:flex mx-auto md:space-x-2 justify-center lg:space-x-10">
+            <div className="md:flex mx-auto md:space-x-2 justify-center lg:space-x-10 space-y-4 lg:space-y-0">
                 {posts.map((post) => (
                     <a className=" rounded-2xl my-2 transition-all ease-in-out duration-300 border-black border-2 w-60 h-70 hover hover:border-starOrange hover:text-starOrange flex mx-auto md:mx-0" key={post.id} href={post.properties.Link.url}>
                         <div className="py-5 overflow-y-hidden space-y-3">

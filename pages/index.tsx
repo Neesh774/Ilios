@@ -62,7 +62,7 @@ export default function Home({posts}){
           </div>
         </div>
       </div>
-      <div className="mt-36 bg-lightOrange relative">
+      <div className="lg:mt-20 mt-52 bg-lightOrange relative">
         <div className="bg-gray-800 text-center lg:mx-16 rounded-xl text-white absolute -bottom-1/2 md:bottom-1/2 drop-shadow-2xl ml-auto mr-auto left-16 right-16 lg:left-0 lg:right-0">
           <div className="lg:px-10 px-5 py-10 md:grid md:grid-cols-3 md:space-x-15 md:align-middle space-y-8 md:space-y-0">
             <div className="text-starOrange font-extrabold text-2xl">Want to work  together?</div>
