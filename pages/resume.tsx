@@ -96,6 +96,12 @@ export default function Blog() {
                                     <RiExternalLinkLine className="h-7 w-7"/>
                                 </a>
                             </div>
+                            <div className="flex justify-end text-right">
+                                <a className="flex hover:text-starOrange underline space-x-4" href="https://csmta.org/students/music-achievement-program-map/">
+                                    <div className="">Music Achievement Program</div>
+                                    <RiExternalLinkLine className="h-7 w-7"/>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div className="space-y-3">
