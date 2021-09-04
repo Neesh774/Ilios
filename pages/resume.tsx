@@ -65,7 +65,7 @@ export default function Blog() {
                         <div className="text-2xl font-bold tracking-widest text-center">
                             Notable Experience
                         </div>
-                        <div className="text-lg space-y-2">
+                        <div className="text-lg space-y-2 ">
                             <div className="flex justify-end text-right">
                                 <a className="flex space-x-4 hover:text-starOrange underline" href="https://cyberagent.newhaven.edu">
                                     <div className="">GenCyber Agent Academy of 2021</div>
