@@ -25,12 +25,6 @@ export default function Blog() {
                         <div className="text-lg space-y-2">
                             <div className="flex space-x-4 justify-end text-right">
                                 <div>
-                                    203-608-0400
-                                </div>
-                                <RiPhoneFill className="h-7 w-7"/>
-                            </div>
-                            <div className="flex space-x-4 justify-end text-right">
-                                <div>
                                     Kanishq0106@gmail.com
                                 </div>
                                 <RiMailFill className="h-7 w-7"/>
