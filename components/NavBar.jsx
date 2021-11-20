@@ -10,7 +10,8 @@ const navigation = [
   { name: 'Projects', href: '/#projects'},
   { name: 'Resume', href: '/resume'},
   { name: 'Blog', href: '/blog'},
-  { name: 'Discord', href: 'https://discord.gg/4Hd8MxuJkv'},
+  { name: 'Discord', href: 'https://discord.gg/b8ugMm7nvc'},
+  { name: 'Ilios Labs', href: '/ilios-labs'}
 ]
 
 function classNames(...classes) {

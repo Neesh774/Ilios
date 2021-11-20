@@ -67,7 +67,7 @@ export default function Home({posts}){
           <div className="lg:px-10 px-5 py-10 md:grid md:grid-cols-3 md:space-x-15 md:items-center space-y-8 md:space-y-0">
             <div className="text-starOrange font-extrabold text-2xl">Want to work  together?</div>
             <div className="text-lg">Let's have a chat. Contact me on Discord or Linkedin.</div>
-            <a href="https://discord.gg/4Hd8MxuJkv" className="flex justify-center border-2 rounded-full px-4 py-2 md:mx-auto border-starOrange hover:bg-starOrange transition-all ease-in-out duration-300 text-center h-14">
+            <a href="https://discord.gg/b8ugMm7nvc" className="flex justify-center border-2 rounded-full px-4 py-2 md:mx-auto border-starOrange hover:bg-starOrange transition-all ease-in-out duration-300 text-center h-14">
               <div className="lg:px-4 py-1 px-2">
                 Let's go
               </div>

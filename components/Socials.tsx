@@ -11,7 +11,7 @@ const Socials:NextPage = () => {
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://twitter.com/Neesh774">
                     <RiTwitterFill/>
                 </a>
-                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://discord.gg/4Hd8MxuJkv"> 
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://discord.gg/b8ugMm7nvc"> 
                     <RiDiscordFill/>
                 </a>
             </div>

@@ -23,13 +23,13 @@ export default function Blog() {
                             Contact
                         </div>
                         <div className="text-lg space-y-2">
-                            <div className="flex space-x-4 justify-end text-right">
+                            <div className="flex space-x-4 sm:justify-end sm:text-right justify-center text-center">
                                 <div>
                                     Kanishq0106@gmail.com
                                 </div>
                                 <RiMailFill className="h-7 w-7"/>
                             </div>
-                            <div className="flex space-x-4 justify-end text-right">
+                            <div className="flex space-x-4 sm:justify-end sm:text-right justify-center text-center">
                                 <div>
                                     <a className="hover:text-starOrange underline" href="https://www.linkedin.com/in/kanishqk/">
                                     Kanishq Kancharla
@@ -44,7 +44,7 @@ export default function Blog() {
                             Education
                         </div>
                         <div className="text-lg">
-                            <div className="space-x-4 justify-end text-right space-y-2">
+                            <div className="space-x-4 sm:justify-end sm:text-right justify-center text-center space-y-2">
                                 <div className="uppercase">Class of 2023</div>
                                 <div className="italic">Pomperaug High School</div>
                                 <div className="italic">Southbury, CT</div>
@@ -60,37 +60,37 @@ export default function Blog() {
                             Notable Experience
                         </div>
                         <div className="text-lg space-y-2 ">
-                            <div className="flex justify-end text-right">
+                            <div className="flex sm:justify-end sm:text-right justify-center text-center">
                                 <a className="flex space-x-4 hover:text-starOrange underline" href="https://cyberagent.newhaven.edu">
                                     <div className="">GenCyber Agent Academy of 2021</div>
                                     <RiExternalLinkLine className="h-7 w-7"/>
                                 </a>
                             </div>
-                            <div className="flex justify-end text-right">
+                            <div className="flex sm:justify-end sm:text-right justify-center text-center">
                                 <a className="flex hover:text-starOrange underline space-x-4" href="https://drive.google.com/file/d/1dmKuJKRBELlbHfDqQTDDFL7jngQHlzYw/view?usp=sharing">
                                     <div className="">Coursera Certifications</div>
                                     <RiExternalLinkLine className="h-7 w-7"/>
                                 </a>
                             </div>
-                            <div className="flex justify-end text-right">
+                            <div className="flex sm:justify-end sm:text-right justify-center text-center">
                                 <a className="flex hover:text-starOrange underline space-x-4" href="https://www.joinsaturn.com">
                                     <div className="">Saturn Ambassador</div>
                                     <RiExternalLinkLine className="h-7 w-7"/>
                                 </a>
                             </div>
-                            <div className="flex justify-end text-right">
+                            <div className="flex sm:justify-end sm:text-right justify-center text-center">
                                 <a className="flex hover:text-starOrange underline space-x-4" href="https://www.istartvalley.org">
                                     <div className="">iStart Valley Internship</div>
                                     <RiExternalLinkLine className="h-7 w-7"/>
                                 </a>
                             </div>
-                            <div className="flex justify-end text-right">
+                            <div className="flex sm:justify-end sm:text-right justify-center text-center">
                                 <a className="flex hover:text-starOrange underline space-x-4" href="https://www.kumon.com">
                                     <div className="">Kumon Math &amp; Reading</div>
                                     <RiExternalLinkLine className="h-7 w-7"/>
                                 </a>
                             </div>
-                            <div className="flex justify-end text-right">
+                            <div className="flex sm:justify-end sm:text-right justify-center text-center">
                                 <a className="flex hover:text-starOrange underline space-x-4" href="https://csmta.org/students/music-achievement-program-map/">
                                     <div className="">Music Achievement Program</div>
                                     <RiExternalLinkLine className="h-7 w-7"/>

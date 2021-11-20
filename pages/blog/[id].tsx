@@ -64,9 +64,9 @@ const renderBlock = (block) => {
     case "child_page":
       return <p>{value.title}</p>;
     default:
-      return `❌ Unsupported block (${
+      return `[❌ Unsupported block (${
         type === "unsupported" ? "unsupported by Notion API" : type
-      })`;
+      })]`;
   }
 };
 

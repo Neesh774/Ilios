@@ -11,7 +11,7 @@ const Languages:NextPage = () => {
                 <a href="https://twitter.com/Neesh774" className="border-2 border-white rounded-full hover:bg-white">
                     <RiTwitterFill className=" text-white hover:text-starOrange transition-all ease-in-out duration-300 rounded-full p-2"/>
                 </a>
-                <a href="https://discord.gg/4Hd8MxuJk" className="border-2 border-white rounded-full hover:bg-white"> 
+                <a href="https://discord.gg/b8ugMm7nvc" className="border-2 border-white rounded-full hover:bg-white"> 
                     <RiDiscordFill className=" text-white hover:text-starOrange transition-all ease-in-out duration-300 rounded-full p-2"/>
                 </a>
             </div>

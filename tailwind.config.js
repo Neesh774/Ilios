@@ -35,6 +35,10 @@ module.exports = {
         'notionblue': '#cce4f9',
         'notionpurple': '#e1d3f8',
         'notionpink': '#f8cce6',
+        'monad': '#53B555',
+        'ilioslabs': '#226699',
+        'bubble': '#C1B1FF',
+        'toast': '#DD00AE'
       },
       fontFamily: {
         'typewriter': ["Oxygen Mono"]
