@@ -23,7 +23,7 @@ module.exports = {
       colors: {
         'starOrange': "#ffac33",
         'lightOrange': "#ffd983",
-        'lighterOrange': '#ffe2a1',
+        'lighterOrange': '#ffe6ad',
         'code': '#f2f2f2',
         'notiondefault': '#e6e6e4',
         'notiongray': '#d7d7d5',

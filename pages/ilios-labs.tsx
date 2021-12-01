@@ -59,7 +59,7 @@ export default function IliosLabs() {
         <div className="rounded-2xl border-4 text-center flex-col justify-center px-5 py-4">
           <div className="font-extrabold text-3xl text-toast flex justify-center items-center">
             <span>Toast</span>{" "}
-            <div className="bg-starOrange text-white rounded-md px-2 text-base ml-3 h-7">
+            <div className="bg-lighterOrange text-starOrange rounded-md px-2 text-base ml-3 h-7">
               BETA
             </div>
           </div>
