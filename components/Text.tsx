@@ -12,7 +12,7 @@ const Text = ({ text }) => {
       <span
         className={[
           bold ? "font-bold" : "",
-          code ? "font-mono bg-code py-2 px-4 rounded-sm" : "",
+          code ? "font-mono py-0.5 px-1 rounded-sm text-code bg-codebg text-sm rounded-2" : "",
           italic ? "italic" : "",
           strikethrough ? "line-through" : "",
           underline ? "underline" : "",

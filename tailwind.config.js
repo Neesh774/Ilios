@@ -38,7 +38,9 @@ module.exports = {
         'monad': '#53B555',
         'ilioslabs': '#226699',
         'bubble': '#C1B1FF',
-        'toast': '#DD00AE'
+        'toast': '#DD00AE',
+        'code': '#EB5757',
+        'codebg': 'rgba(135,131,120,0.15)'
       },
       fontFamily: {
         'typewriter': ["Oxygen Mono"]
