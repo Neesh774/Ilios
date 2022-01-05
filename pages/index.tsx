@@ -7,11 +7,13 @@ import FooterSocials from '../components/FooterSocials'
 import {Typewriter} from 'typewriting-react'
 import {queryDatabaseTime} from '../lib/notion'
 import {SiNextDotJs, SiTailwindcss} from 'react-icons/si'
+import MetaTags from '../components/MetaTags'
 
 export default function Home({posts}){
   const avatarURL = "https://media.discordapp.net/attachments/834443815205077032/878728732234358784/image0.jpg?width=536&height=536";
   return (
     <>
+      <MetaTags />
       <div className="mt-10 mx-auto max-w-7xl px-4 sm:mt-8 sm:px-6 md:mt-20">
         <div className="sm:text-center">
           <div className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">

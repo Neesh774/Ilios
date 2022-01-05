@@ -65,7 +65,7 @@ export default function IliosLabs() {
           </div>
           <div>
             An advanced Discord Bot that makes it quick and simple to make
-            images, whether they&apos; memes, inspirational images, or creating
+            images, whether they&apos;re memes, inspirational images, or creating
             your own image with custom everything.
           </div>
           <button

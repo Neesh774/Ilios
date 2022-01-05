@@ -1,10 +1,16 @@
 import { Fragment } from "react";
-import { getDatabase, getPage, getBlocks, queryDatabaseSlug } from "../../lib/notion.js";
-import Link from 'next/link'
-import ReactTimeAgo from 'react-time-ago'
-import Date from '../../components/date'
-import Text from '../../components/Text'
-import {tagColor, classNames} from './index'
+import {
+  getDatabase,
+  getPage,
+  getBlocks,
+  queryDatabaseSlug,
+} from "../../lib/notion.js";
+import Link from "next/link";
+import ReactTimeAgo from "react-time-ago";
+import Date from "../../components/date";
+import Text from "../../components/Text";
+import { tagColor, classNames } from "./index";
+import MetaTags from "../../components/MetaTags.jsx";
 const renderBlock = (block) => {
   const { type, id } = block;
   const value = block[type];
@@ -45,7 +51,12 @@ const renderBlock = (block) => {
       return (
         <div>
           <label htmlFor={id}>
-            <input type="checkbox" id={id} defaultChecked={value.checked} disabled/>{" "}
+            <input
+              type="checkbox"
+              id={id}
+              defaultChecked={value.checked}
+              disabled
+            />{" "}
             <Text text={value.text} />
           </label>
         </div>
@@ -74,49 +85,56 @@ export default function Post({ page, blocks }) {
   if (!page || !blocks) {
     return <div />;
   }
-  return (   
-    <div className="divide-y-2 divide-gray-500 divide-opacity-60 px-5">
-      <div className="mx-5">
-        <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-700 font-extrabold mt-5 mb-1">
-          <Text text={page.properties.Name.title} />
-          <div className="flex space-x-2 mr-2 mt-2">
-            <div className="text-gray-500 font-normal text-sm">
-              Created&nbsp;<Date dateString={page.properties.Created.created_time}/>
-            </div>
-            <div className="text-gray-500 hidden sm:block text-sm font-normal">•</div>
-            {page.properties.Tags.multi_select.map((tag) => (
+  return (
+    <>
+      <MetaTags title={page.properties.Name.title}  description={page.properties.description.plain_text}/>
+      <div className="divide-y-2 divide-gray-500 divide-opacity-60 px-5">
+        <div className="mx-5">
+          <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-700 font-extrabold mt-5 mb-1">
+            <Text text={page.properties.Name.title} />
+            <div className="flex space-x-2 mr-2 mt-2">
+              <div className="text-gray-500 font-normal text-sm">
+                Created&nbsp;
+                <Date dateString={page.properties.Created.created_time} />
+              </div>
+              <div className="text-gray-500 hidden sm:block text-sm font-normal">
+                •
+              </div>
+              {page.properties.Tags.multi_select.map((tag) => (
                 <div key={tag.id}>
-                    <div className={classNames(
-                      'rounded-md',
-                      tagColor(tag.color)
-                    )}>
-                        <div className="px-2 py-1 text-xs text-black font-normal">
-                            {tag.name}
-                        </div>
+                  <div
+                    className={classNames("rounded-md", tagColor(tag.color))}
+                  >
+                    <div className="px-2 py-1 text-xs text-black font-normal">
+                      {tag.name}
                     </div>
+                  </div>
                 </div>
-            ))}
+              ))}
+            </div>
+          </div>
+          <div className="my-1">
+            <Link href="/blog">
+              <a className="text-lg font-bold">← Back to Blogs</a>
+            </Link>
           </div>
         </div>
-        <div className="my-1">
+        <div className="py-4">
+          {blocks.map((block) => (
+            <div key={block.id} className="pt-2 lg:mx-72 sm:mx-36 mx-4">
+              <Fragment>{renderBlock(block)}</Fragment>
+            </div>
+          ))}
+        </div>
+        <div className="p-5 flex justify-center">
           <Link href="/blog">
-            <a className="text-lg font-bold">← Back to Blogs</a>
+            <a className="bg-starOrange text-white font-bold rounded-md p-3 hover:bg-yellow-500 transition-all ease-in-out duration-100">
+              ←Back to Blogs
+            </a>
           </Link>
         </div>
       </div>
-      <div className="py-4">
-        {blocks.map((block) => (
-          <div key={block.id} className="pt-2 lg:mx-72 sm:mx-36 mx-4">
-            <Fragment>{renderBlock(block)}</Fragment>
-          </div>
-        ))}
-      </div>
-      <div className="p-5 flex justify-center">
-        <Link href="/blog">
-          <a className="bg-starOrange text-white font-bold rounded-md p-3 hover:bg-yellow-500 transition-all ease-in-out duration-100">←Back to Blogs</a>
-        </Link>
-      </div>
-    </div>
+    </>
   );
 }
 
@@ -130,17 +148,20 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const slug = context.params;
-  const page = await queryDatabaseSlug(slug.id, process.env.NOTION_DATABASE_BLOG_ID);
-  if(!page){
+  const page = await queryDatabaseSlug(
+    slug.id,
+    process.env.NOTION_DATABASE_BLOG_ID
+  );
+  if (!page) {
     //send to 404 page
     return {
       props: { 404: true },
       notFound: true,
       revalidate: 100,
-  };
+    };
   }
   const blocks = await getBlocks(page.id);
-  
+
   // Retrieve block children for nested blocks (one  level deep), for example toggle blocks
   // https://developers.notion.com/docs/working-with-page-content#reading-nested-blocks
   const childBlocks = await Promise.all(
