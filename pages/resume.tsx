@@ -12,6 +12,27 @@ export function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+const projects = [
+  {
+    name: "Monad",
+    description: "Share and discover code snippets",
+    link: "https://monad.ilioslabs.dev",
+    tags: ["React", "Next.js", "TypeScript", "Supabase", "SEO"],
+  },
+  {
+    name: "Bubble",
+    description: "A minimalistic text editor",
+    link: "https://bubble.ilioslabs.dev",
+    tags: ["React", "Next.js", "TypeScript", "WYSIWYG"],
+  },
+  {
+    name: "Ilios",
+    description: "My portfolio website",
+    link: "https://neesh.ilioslabs.dev",
+    tags: ["React", "Next.js", "TypeScript", "SEO", "TailwindCSS"],
+  },
+];
+
 export default function Blog() {
   return (
     <>
@@ -151,7 +172,8 @@ export default function Blog() {
                 Hey! My name is Kanishq and I&apos;m a junior in high school,
                 and I want to build a career in computer science. I&apos;m a
                 passionate person, and I have the drive to reach my own goals.
-                I&apos;m ambitious and I have a strong work ethic to finish what I start.
+                I&apos;m ambitious and I have a strong work ethic to finish what
+                I start.
               </div>
             </div>
             <div className="space-y-3">
@@ -225,6 +247,38 @@ export default function Blog() {
                   <div>&bull; Science Bowl - Member - 5 years</div>
                   <div>&bull; Science Olympiad - Member - 5 years</div>
                 </div>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-center flex">
+                <div className="text-2xl font-bold px-10 py-2 tracking-widest bg-lighterOrange mx-auto">
+                  Developing
+                </div>
+              </div>
+              <div className="space-y-3">
+                <div className="uppercase font-bold text-lg">
+                  Personal Projects
+                </div>
+                {projects.map((project) => (
+                  <div
+                    className="ml-6 text-lg flex justify-between"
+                    key={project.name}
+                  >
+                    <a
+                      href={project.link}
+                      className="hover:text-starOrange underline"
+                    >
+                      &bull; {project.name} - {project.description}
+                    </a>
+                    <div className="flex flex-row gap-2">
+                      {project.tags.map((tag) => (
+                        <div className="p-1 rounded-sm bg-gray-300 text-gray-800 font-semibold text-sm" key={tag}>
+                          {tag}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

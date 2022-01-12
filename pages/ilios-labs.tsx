@@ -13,7 +13,7 @@ export default function IliosLabs() {
           designers, or just people who want convenient tools.
         </div>
       </div>
-      <div className="space-x-4 pt-6 grid-cols-3 grid">
+      <div className="space-x-4 pt-6 grid-rows-3 md:grid-cols-3 grid">
         <div className="rounded-2xl border-4 text-center flex-col justify-center px-5 py-4">
           <div className="font-extrabold text-3xl text-monad">Monad</div>
           <div>
