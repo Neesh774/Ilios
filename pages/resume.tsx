@@ -31,6 +31,18 @@ const projects = [
     link: "https://neesh.ilioslabs.dev",
     tags: ["React", "Next.js", "TypeScript", "SEO", "TailwindCSS"],
   },
+  {
+    name: "Codetta",
+    description: "A code compiling Discord Bot",
+    link: "https://github.com/Neesh774/Codetta",
+    tags: ["Discord.js", "Node", "TypeScript", "API"]
+  },
+  {
+    name: "Toast",
+    description: "A text editor",
+    link: "",
+    tags: ["Discord.js", "Node", "TypeScript", "Canvas"]
+  }
 ];
 
 export default function Blog() {
