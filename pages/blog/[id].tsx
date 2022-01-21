@@ -10,7 +10,8 @@ import ReactTimeAgo from "react-time-ago";
 import Date from "../../components/date";
 import Text from "../../components/Text";
 import { tagColor, classNames } from "./index";
-import MetaTags from "../../components/MetaTags.jsx";
+import MetaTags from "../../components/MetaTags";
+import Code from "../../components/Code";
 const renderBlock = (block) => {
   const { type, id } = block;
   const value = block[type];
@@ -24,21 +25,21 @@ const renderBlock = (block) => {
       );
     case "heading_1":
       return (
-        <h1>
+        <div className="text-3xl font-extrabold">
           <Text text={value.text} />
-        </h1>
+        </div>
       );
     case "heading_2":
       return (
-        <h2>
+        <div className="text-2xl font-bold">
           <Text text={value.text} />
-        </h2>
+        </div>
       );
     case "heading_3":
       return (
-        <h3>
+        <div className="text-xl font-semibold">
           <Text text={value.text} />
-        </h3>
+        </div>
       );
     case "bulleted_list_item":
     case "numbered_list_item":
@@ -74,6 +75,8 @@ const renderBlock = (block) => {
       );
     case "child_page":
       return <p>{value.title}</p>;
+    case "code":
+      return <Code code={value}/>
     default:
       return `[❌ Unsupported block (${
         type === "unsupported" ? "unsupported by Notion API" : type
@@ -85,9 +88,10 @@ export default function Post({ page, blocks }) {
   if (!page || !blocks) {
     return <div />;
   }
+
   return (
     <>
-      <MetaTags title={page.properties.Name.title}  description={page.properties.description.plain_text}/>
+      <MetaTags title={page.properties.Name ? page.properties.Name.title[0].plain_text :  "NO TITLE"}  description={page.properties.Description ? page.properties.Description.rich_text[0].plain_text : "NO DESCRIPTION"}/>
       <div className="divide-y-2 divide-gray-500 divide-opacity-60 px-5">
         <div className="mx-5">
           <div className="text-4xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-700 font-extrabold mt-5 mb-1">
