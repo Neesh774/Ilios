@@ -2,7 +2,7 @@ import hljs from "highlight.js";
 
 export default function Code({ code }) {
     return (
-        <pre className="font-mono py-0.5 px-1 rounded-sm bg-codebg text-sm rounded-2">
+        <pre className="font-mono pt-6 pr-4 pl-8 pb-8 bg-codebg text-sm rounded-2">
             <code className={`language-${code.language} `}>
                 <div dangerouslySetInnerHTML={
                     {
