@@ -140,7 +140,7 @@ export default function Post({ page, blocks }) {
           {blocks.map((block) => (
             <div
               key={block.id}
-              className="my-12 mx-auto max-w-layout-max xl:max-w-2xl lg:max-w-xl md:max-w-lg sm:max-w-md xs:max-w-sm"
+              className="my-4 mx-auto max-w-layout-max xl:max-w-2xl lg:max-w-xl md:max-w-lg sm:max-w-md xs:max-w-sm"
             >
               <Fragment>{renderBlock(block)}</Fragment>
             </div>
