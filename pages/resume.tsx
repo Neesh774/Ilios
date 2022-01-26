@@ -172,7 +172,10 @@ export default function Blog() {
               <Skills text="Public Speaking" value={6} max={7} type="social" />
               <Skills text="ReactJS" value={5} max={7} type="technical" />
               <Skills text="Java" value={6} max={7} type="technical" />
-              <Skills text="REST API's" value={4} max={7} type="technical" />
+              <Skills text="Git" value={5} max={7} type="technical" />
+              <Skills text="Python" value={5} max={7} type="technical" />
+              <Skills text="Node.JS" value={6} max={7} type="technical" />
+              <Skills text="REST API" value={4} max={7} type="technical" />
             </div>
           </div>
           <div className="mx-4 space-y-8">
@@ -182,10 +185,8 @@ export default function Blog() {
               </div>
               <div className="text-lg">
                 Hey! My name is Kanishq and I&apos;m a junior in high school,
-                and I want to build a career in computer science. I&apos;m a
-                passionate person, and I have the drive to reach my own goals.
-                I&apos;m ambitious and I have a strong work ethic to finish what
-                I start.
+                and I want to build a career in computer science. I pride myself in writing
+                clean and efficient code, and I have both technical and social communication skills.
               </div>
             </div>
             <div className="space-y-3">
