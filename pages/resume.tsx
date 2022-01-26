@@ -33,13 +33,13 @@ const projects = [
   },
   {
     name: "Codetta",
-    description: "A code compiling Discord Bot",
+    description: "A Node.js application that uses an API to compile code in over 20 languages",
     link: "https://github.com/Neesh774/Codetta",
     tags: ["Discord.js", "Node", "TypeScript", "API"]
   },
   {
     name: "Toast",
-    description: "A text editor",
+    description: "A Node.js application for generating images within the Discord communication platform",
     link: "",
     tags: ["Discord.js", "Node", "TypeScript", "Canvas"]
   }
@@ -61,7 +61,7 @@ export default function Blog() {
           </div>
         </div>
         <div className="md:flex pt-10 justify-center mb-10 md:px-4 space-y-10 md:space-y-0">
-          <div className="space-y-8 md:ml-4">
+          <div className="space-y-8 md:mx-20">
             <div className="space-y-4">
               <div className="text-2xl font-bold tracking-widest mb-4 text-center">
                 Contact
@@ -178,7 +178,7 @@ export default function Blog() {
               <Skills text="REST API" value={4} max={7} type="technical" />
             </div>
           </div>
-          <div className="mx-4 space-y-8">
+          <div className="md:mr-20 max-w-6xl space-y-8">
             <div className="space-y-3">
               <div className="text-2xl font-bold tracking-widest text-center">
                 About
@@ -274,12 +274,12 @@ export default function Blog() {
                 </div>
                 {projects.map((project) => (
                   <div
-                    className="ml-6 text-lg flex justify-between"
+                    className="ml-6 text-lg flex flex-col md:flex-row justify-between"
                     key={project.name}
                   >
                     <a
                       href={project.link}
-                      className="hover:text-starOrange underline"
+                      className="hover:text-starOrange underline mb-2 sm:mb-0"
                     >
                       &bull; {project.name} - {project.description}
                     </a>
