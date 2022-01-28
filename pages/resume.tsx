@@ -33,16 +33,18 @@ const projects = [
   },
   {
     name: "Codetta",
-    description: "A Node.js application that uses an API to compile code in over 20 languages",
+    description:
+      "A Node.js application that uses an API to compile code in over 20 languages",
     link: "https://github.com/Neesh774/Codetta",
-    tags: ["Discord.js", "Node", "TypeScript", "API"]
+    tags: ["Discord.js", "Node", "TypeScript", "API"],
   },
   {
     name: "Toast",
-    description: "A Node.js application for generating images within the Discord communication platform",
+    description:
+      "A Node.js application for generating images within the Discord communication platform",
     link: "",
-    tags: ["Discord.js", "Node", "TypeScript", "Canvas"]
-  }
+    tags: ["Discord.js", "Node", "TypeScript", "Canvas"],
+  },
 ];
 
 export default function Blog() {
@@ -185,8 +187,9 @@ export default function Blog() {
               </div>
               <div className="text-lg">
                 Hey! My name is Kanishq and I&apos;m a junior in high school,
-                and I want to build a career in computer science. I pride myself in writing
-                clean and efficient code, and I have both technical and social communication skills.
+                and I want to build a career in computer science. I pride myself
+                in writing clean and efficient code, and I have both technical
+                and social communication skills.
               </div>
             </div>
             <div className="space-y-3">
@@ -274,7 +277,7 @@ export default function Blog() {
                 </div>
                 {projects.map((project) => (
                   <div
-                    className="ml-6 text-lg flex flex-col md:flex-row justify-between"
+                    className="ml-6 text-lg flex flex-col xl:flex-row justify-between"
                     key={project.name}
                   >
                     <a
@@ -285,7 +288,10 @@ export default function Blog() {
                     </a>
                     <div className="flex flex-row gap-2">
                       {project.tags.map((tag) => (
-                        <div className="p-1 rounded-sm bg-gray-300 text-gray-800 font-semibold text-sm" key={tag}>
+                        <div
+                          className="p-1 rounded-sm bg-gray-300 text-gray-800 font-semibold text-sm"
+                          key={tag}
+                        >
                           {tag}
                         </div>
                       ))}
@@ -293,6 +299,32 @@ export default function Blog() {
                   </div>
                 ))}
               </div>
+            </div>
+            <div className="space-y-3">
+              <div className="text-center flex">
+                <div className="text-2xl font-bold px-10 py-2 tracking-widest bg-lighterOrange mx-auto">
+                  Languages
+                </div>
+              </div>
+              <p className="flex flex-wrap justify-center">
+                <img className="h-8 m-1" src="https://img.shields.io/badge/Java-orange?style=for-the-badge&logo=java&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/git-f1502f?style=for-the-badge&logo=git&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/react-61dbfb?style=for-the-badge&logo=react&logoColor=black" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/tailwind%20css-38B2AC?style=for-the-badge&logo=tailwind%20css&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/postgres-blue?style=for-the-badge&logo=postgresql&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/nextjs-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/nodejs-339933?style=for-the-badge&logo=node.js&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+                <img className="h-8 m-1" src="https://img.shields.io/badge/svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" />
+              </p>
             </div>
           </div>
         </div>
