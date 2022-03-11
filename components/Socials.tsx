@@ -16,7 +16,7 @@ const Socials:NextPage = () => {
                 </a>
             </div>
             <div className="space-x-4 flex">    
-                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="mailto:kanishq0106@gmail.com">
+                <a className="hover:text-5xl transition-all ease-in-out duration-300" href="mailto:neesh@ilioslabs.dev">
                     <RiMailLine/>
                 </a>
                 <a className="hover:text-5xl transition-all ease-in-out duration-300" href="https://www.linkedin.com/in/kanishq-kancharla-390928190/">
