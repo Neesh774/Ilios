@@ -16,7 +16,7 @@ const Languages:NextPage = () => {
                 </a>
             </div>
             <div className="space-x-4 flex justify-center">    
-                <a href="mailto:kanishq0106@gmail.com" className="border-2 border-white rounded-full hover:bg-white">
+                <a href="mailto:neesh@ilioslabs.dev" className="border-2 border-white rounded-full hover:bg-white">
                     <RiMailLine className=" text-white hover:text-starOrange transition-all ease-in-out duration-300 rounded-full p-2"/>
                 </a>
                 <a href="https://www.linkedin.com/in/kanishq-kancharla-390928190/" className="border-2 border-white rounded-full hover:bg-white">
