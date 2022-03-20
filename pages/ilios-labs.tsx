@@ -13,10 +13,10 @@ export default function IliosLabs() {
           designers, or just people who want convenient tools.
         </div>
       </div>
-      <div className="space-x-4 pt-6 grid-rows-3 md:grid-cols-3 grid">
+      <div className="md:space-x-4 space-y-2 md:space-y-0 pt-6 flex flex-col md:flex-row mb-8 md:mb-0">
         <div className="rounded-2xl border-4 text-center flex-col justify-center px-5 py-4">
           <div className="font-extrabold text-3xl text-monad">Monad</div>
-          <div>
+          <div className="flex">
             The easiest way to share and discover code snippets of all the
             popular languages, built with SEO, security, and simplicity in mind.
             Keep your snippets public or unlisted to keep them safe.
@@ -37,7 +37,7 @@ export default function IliosLabs() {
         </div>
         <div className="rounded-2xl border-4 text-center flex-col justify-center px-5 py-4">
           <div className="font-extrabold text-3xl text-bubble">Bubble</div>
-          <div>
+          <div className="flex">
             An extremely minimalistic text editor that lets you write quick jots
             and notes when you need them most, and an added bonus of having text
             formatting.
@@ -54,32 +54,6 @@ export default function IliosLabs() {
             className="mx-auto rounded-full w-48 h-48 mt-10"
             alt="toast"
             src={"/bubble.svg"}
-          />
-        </div>
-        <div className="rounded-2xl border-4 text-center flex-col justify-center px-5 py-4">
-          <div className="font-extrabold text-3xl text-toast flex justify-center items-center">
-            <span>Toast</span>{" "}
-            <div className="bg-lighterOrange text-starOrange rounded-md px-2 text-base ml-3 h-7">
-              BETA
-            </div>
-          </div>
-          <div>
-            An advanced Discord Bot that makes it quick and simple to make
-            images, whether they&apos;re memes, inspirational images, or creating
-            your own image with custom everything.
-          </div>
-          <button
-            disabled
-            className="px-5 py-4 flex mx-auto space-x-4 cursor-not-allowed"
-          >
-            <a className="flex border-2 opacity-60 border-starOrange text-starOrange font-bold rounded-md p-3">
-              Check it out
-            </a>
-          </button>
-          <img
-            className="mx-auto rounded-full w-48 h-48 mt-10"
-            alt="toast"
-            src={"/toast.svg"}
           />
         </div>
       </div>

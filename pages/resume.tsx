@@ -1,10 +1,10 @@
 import {
-  RiPhoneFill,
   RiMailFill,
   RiLinkedinFill,
   RiExternalLinkLine,
   RiFileDownloadLine,
 } from "react-icons/ri";
+import { FaHackerrank } from "react-icons/fa";
 import Link from "next/link";
 import Skills from "../components/Skills";
 import MetaTags from "../components/MetaTags";
@@ -62,18 +62,18 @@ export default function Blog() {
             learn.
           </div>
         </div>
-        <div className="md:flex pt-10 justify-center mb-10 md:px-4 space-y-10 md:space-y-0">
+        <div className="flex flex-col-reverse md:flex-row pt-10 justify-center mb-10 md:px-4 space-y-10 md:space-y-0">
           <div className="space-y-8 md:mx-20">
             <div className="space-y-4">
               <div className="text-2xl font-bold tracking-widest mb-4 text-center">
                 Contact
               </div>
               <div className="text-lg space-y-2">
-                <div className="flex space-x-4 sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex space-x-4 md:justify-end md:text-right justify-center text-center">
                   <div>Kanishq0106@gmail.com</div>
                   <RiMailFill className="h-7 w-7" />
                 </div>
-                <div className="flex space-x-4 sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex space-x-4 md:justify-end md:text-right justify-center text-center">
                   <div>
                     <a
                       className="hover:text-starOrange underline"
@@ -84,6 +84,17 @@ export default function Blog() {
                   </div>
                   <RiLinkedinFill className="h-7 w-7" />
                 </div>
+                <div className="flex space-x-4 md:justify-end md:text-right justify-center text-center">
+                  <div>
+                    <a
+                      className="hover:text-starOrange underline"
+                      href="https://www.hackerrank.com/Neesh774"
+                    >
+                      Neesh774
+                    </a>
+                  </div>
+                  <FaHackerrank className="h-7 w-7" />
+                </div>
               </div>
             </div>
             <div className="space-y-4">
@@ -91,7 +102,7 @@ export default function Blog() {
                 Education
               </div>
               <div className="text-lg">
-                <div className="space-x-4 sm:justify-end sm:text-right justify-center text-center space-y-2">
+                <div className="space-x-4 md:justify-end md:text-right justify-center text-center space-y-2">
                   <div className="uppercase">Class of 2023</div>
                   <div className="italic">Pomperaug High School</div>
                   <div className="italic">Southbury, CT</div>
@@ -109,7 +120,7 @@ export default function Blog() {
                 Notable Experience
               </div>
               <div className="text-lg space-y-2 ">
-                <div className="flex sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex md:justify-end md:text-right justify-center text-center">
                   <a
                     className="flex space-x-4 hover:text-starOrange underline"
                     href="https://cyberagent.newhaven.edu"
@@ -118,7 +129,7 @@ export default function Blog() {
                     <RiExternalLinkLine className="h-7 w-7" />
                   </a>
                 </div>
-                <div className="flex sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex md:justify-end md:text-right justify-center text-center">
                   <a
                     className="flex hover:text-starOrange underline space-x-4"
                     href="https://drive.google.com/file/d/1dmKuJKRBELlbHfDqQTDDFL7jngQHlzYw/view?usp=sharing"
@@ -127,7 +138,7 @@ export default function Blog() {
                     <RiExternalLinkLine className="h-7 w-7" />
                   </a>
                 </div>
-                <div className="flex sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex md:justify-end md:text-right justify-center text-center">
                   <a
                     className="flex hover:text-starOrange underline space-x-4"
                     href="https://www.joinsaturn.com"
@@ -136,7 +147,7 @@ export default function Blog() {
                     <RiExternalLinkLine className="h-7 w-7" />
                   </a>
                 </div>
-                <div className="flex sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex md:justify-end md:text-right justify-center text-center">
                   <a
                     className="flex hover:text-starOrange underline space-x-4"
                     href="https://www.istartvalley.org"
@@ -145,7 +156,7 @@ export default function Blog() {
                     <RiExternalLinkLine className="h-7 w-7" />
                   </a>
                 </div>
-                <div className="flex sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex md:justify-end md:text-right justify-center text-center">
                   <a
                     className="flex hover:text-starOrange underline space-x-4"
                     href="https://www.kumon.com"
@@ -154,7 +165,7 @@ export default function Blog() {
                     <RiExternalLinkLine className="h-7 w-7" />
                   </a>
                 </div>
-                <div className="flex sm:justify-end sm:text-right justify-center text-center">
+                <div className="flex md:justify-end md:text-right justify-center text-center">
                   <a
                     className="flex hover:text-starOrange underline space-x-4"
                     href="https://csmta.org/students/music-achievement-program-map/"
@@ -286,7 +297,7 @@ export default function Blog() {
                     >
                       &bull; {project.name} - {project.description}
                     </a>
-                    <div className="flex flex-row gap-2">
+                    <div className="flex flex-row gap-2 mt-2">
                       {project.tags.map((tag) => (
                         <div
                           className="p-1 rounded-sm bg-gray-300 text-gray-800 font-semibold text-sm"
@@ -307,23 +318,91 @@ export default function Blog() {
                 </div>
               </div>
               <p className="flex flex-wrap justify-center">
-                <img className="h-8 m-1" src="https://img.shields.io/badge/Java-orange?style=for-the-badge&logo=java&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=HTML5&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/git-f1502f?style=for-the-badge&logo=git&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/react-61dbfb?style=for-the-badge&logo=react&logoColor=black" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/tailwind%20css-38B2AC?style=for-the-badge&logo=tailwind%20css&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/postgres-blue?style=for-the-badge&logo=postgresql&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/nextjs-000000?style=for-the-badge&logo=next.js&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/nodejs-339933?style=for-the-badge&logo=node.js&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
-                <img className="h-8 m-1" src="https://img.shields.io/badge/svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" />
+                <img
+                  alt="Java"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/Java-orange?style=for-the-badge&logo=java&logoColor=white"
+                />
+                <img
+                  alt="Python"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/python-blue?style=for-the-badge&logo=python&logoColor=white"
+                />
+                <img
+                  alt="JS"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/javascript-yellow?style=for-the-badge&logo=javascript&logoColor=white"
+                />
+                <img
+                  alt="HTML"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=HTML5&logoColor=white"
+                />
+                <img
+                  alt="CSS"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                />
+                <img
+                  alt="Git"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/git-f1502f?style=for-the-badge&logo=git&logoColor=white"
+                />
+                <img
+                  alt="Github"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/github-black?style=for-the-badge&logo=github&logoColor=white"
+                />
+                <img
+                  alt="React"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/react-61dbfb?style=for-the-badge&logo=react&logoColor=black"
+                />
+                <img
+                  alt="TailwindCSS"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/tailwind%20css-38B2AC?style=for-the-badge&logo=tailwind%20css&logoColor=white"
+                />
+                <img
+                  alt="Typescript"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=white"
+                />
+                <img
+                  alt="Postgres"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/postgres-blue?style=for-the-badge&logo=postgresql&logoColor=white"
+                />
+                <img
+                  alt="NextJS"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/nextjs-000000?style=for-the-badge&logo=next.js&logoColor=white"
+                />
+                <img
+                  alt="Express"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white"
+                />
+                <img
+                  alt="Node"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/nodejs-339933?style=for-the-badge&logo=node.js&logoColor=white"
+                />
+                <img
+                  alt="Bootstrap"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"
+                />
+                <img
+                  alt="Firebase"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black"
+                />
+                <img
+                  alt="Svelte"
+                  className="h-8 m-1"
+                  src="https://img.shields.io/badge/svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white"
+                />
               </p>
             </div>
           </div>
