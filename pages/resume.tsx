@@ -69,8 +69,8 @@ export default function Blog() {
                 Contact
               </div>
               <div className="text-lg space-y-2">
-                <div className="flex space-x-4 md:justify-end md:text-right justify-center text-center">
-                  <div>Kanishq0106@gmail.com</div>
+                <div className="flex space-x-4 sm:justify-end sm:text-right justify-center text-center">
+                  <div>Neesh@ilioslabs.dev</div>
                   <RiMailFill className="h-7 w-7" />
                 </div>
                 <div className="flex space-x-4 md:justify-end md:text-right justify-center text-center">

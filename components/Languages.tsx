@@ -9,7 +9,7 @@ import {
   SiJava,
   SiJavascript,
   SiPython,
-  SiCsharp,
+  SiSvelte,
 } from "react-icons/si";
 import type { NextPage } from "next";
 
@@ -71,9 +71,9 @@ const Languages: NextPage = () => {
         </a>
         <a
           className="sm:hover:text-5xl transition-all ease-in-out duration-300"
-          href="https://www.w3schools.com/cs/cs_intro.php"
+          href="https://svelte.dev/"
         >
-          <SiCsharp />
+          <SiSvelte />
         </a>
       </div>
     </div>
