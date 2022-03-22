@@ -39,13 +39,13 @@ export default function Projects({ posts }) {
           </a>
         ))}
       </div>
-      <div className="flex justify-center pt-3">
+      <div className="flex justify-center items-center pt-3">
         <a
-          className="px-3 py-2 flex rounded-full border-2 border-starOrange hover:bg-starOrange text-starOrange hover:text-white transition-all ease-in-out duration-300 space-x-2 justify-center"
+          className="px-3 py-2 items-center flex rounded-full border-2 border-starOrange hover:bg-starOrange text-starOrange hover:text-white transition-all ease-in-out duration-300 space-x-2 justify-center"
           href="https://github.com/Neesh774"
         >
-          <RiGithubFill className="h-7 w-7" />
-          <div className="text-xl">See more on Github</div>
+          <RiGithubFill className="h-8 w-8 lg:h-7 lg:w-7" />
+          <div className="lg:text-xl font-semibold">See more on Github</div>
         </a>
       </div>
     </div>

@@ -69,13 +69,13 @@ export default function Home({ posts, avatarURL }) {
           </div>
         </div>
       </div>
-      <div className="lg:mt-20 mt-32 bg-lightOrange relative">
-        <div className="bg-gray-800 text-center lg:mx-16 rounded-xl text-white absolute -bottom-1/2 md:bottom-1/2 drop-shadow-2xl ml-auto mr-auto left-16 right-16 lg:left-0 lg:right-0">
-          <div className="lg:px-10 px-5 py-10 md:grid md:grid-cols-3 md:space-x-15 md:items-center space-y-8 md:space-y-0">
-            <div className="text-starOrange font-extrabold text-2xl">
+      <div className="lg:mt-20 mt-24 bg-lightOrange relative">
+        <div className="bg-gray-800 text-center lg:mx-16 rounded-xl text-white absolute -bottom-1/4 md:bottom-1/2 drop-shadow-2xl m-auto left-4 right-4 lg:left-0 lg:right-0">
+          <div className="lg:px-10 lg:py-10 px-5 py-4 md:grid md:grid-cols-3 md:space-x-15 md:items-center space-y-8 md:space-y-0">
+            <div className="text-starOrange font-extrabold md:text-2xl text-xl">
               Want to work together?
             </div>
-            <div className="text-lg">
+            <div className="md:text-lg">
               Let's have a chat. Contact me on Discord or Linkedin.
             </div>
             <a
@@ -88,13 +88,13 @@ export default function Home({ posts, avatarURL }) {
         </div>
         <div className="pb-32 lg:pb-10 lg:py-14 px-40"></div>
       </div>
-      <div className="bg-lightOrange pt-40 md:pt-10 lg:pt-4">
-        <div className="pb-20 px-12 md:px-40 justify-center">
-          <div className="text-center font-extrabold text-3xl">
+      <div className="bg-lightOrange pt-24 md:pt-10 lg:pt-4">
+        <div className="pb-20 px-2 md:px-40 justify-center">
+          <div className="text-center font-extrabold text-2xl lg:text-3xl">
             <div className="mb-4">
               <img
                 src="/favicon.svg"
-                className="w-20 h-20 mx-auto hover:animate-spin"
+                className="w-20 h-20 mx-auto md:hover:animate-spin"
                 alt="star"
               />
               <div className="text-white">ツCheesyNeeshツ#8152</div>
