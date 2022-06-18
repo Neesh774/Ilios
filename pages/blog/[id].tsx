@@ -12,6 +12,7 @@ import Text from "../../components/Text";
 import { tagColor, classNames } from "./index";
 import MetaTags from "../../components/MetaTags";
 import Code from "../../components/Code";
+import Image from "next/image";
 const renderBlock = (block) => {
   const { type, id } = block;
   const value = block[type];
@@ -77,6 +78,11 @@ const renderBlock = (block) => {
       return <p>{value.title}</p>;
     case "code":
       return <Code code={value} />;
+    case "image":
+      let url: string;
+      if (value.type == "external") url = value["external"].url;
+      else url = value["file"].url;
+      return <img src={url} alt={"Blog Image"} />;
     default:
       return `[❌ Unsupported block (${
         type === "unsupported" ? "unsupported by Notion API" : type
