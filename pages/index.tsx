@@ -46,7 +46,7 @@ export default function Home({ posts, avatarURL }) {
           </div>
           <div className="px-4">
             Ever since I was a kid, I've loved programming. Now, I've been
-            coding for over 6 years, and I'm just a junior in high school! I
+            coding for over 6 years, and I'm just a senior in high school! I
             love solving difficult problems and learning new languages.
           </div>
           <div className="flex">
