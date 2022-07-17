@@ -9,10 +9,10 @@ import { queryDatabaseTime } from "../lib/notion";
 import { SiNextDotJs, SiTailwindcss } from "react-icons/si";
 import MetaTags from "../components/MetaTags";
 import { useEffect, useState } from "react";
+import Avatar from "../public/avatar.png";
+import Image from "next/image";
 
-export default function Home({ posts, avatarURL }) {
-  const [user, setUser] = useState(null);
-
+export default function Home({ posts }) {
   return (
     <>
       <MetaTags />
@@ -32,10 +32,10 @@ export default function Home({ posts, avatarURL }) {
           </div>
         </div>
         <div className="mt-16 mb-16 sm:mt-32 mx-auto sm:animate-bounce">
-          <img
+          <Image
             className="w-60 h-60 rounded-full mx-auto sm:hover:animate-spin"
-            src={avatarURL}
-            alt=""
+            src={Avatar}
+            alt="Avatar"
           />
         </div>
       </div>
@@ -122,22 +122,9 @@ export default function Home({ posts, avatarURL }) {
 
 export const getStaticProps = async () => {
   const database = await queryDatabaseTime();
-  let avatarURL =
-    "https://media.discordapp.net/attachments/834443815205077032/878728732234358784/image0.jpg?width=512&height=512";
-  fetch("https://api.lanyard.rest/v1/users/297504183282565130").then((res) => {
-    res.json().then((data) => {
-      avatarURL =
-        "https://cdn.discordapp.com/avatars/" +
-        data.data.discord_user.id +
-        "/" +
-        data.data.discord_user.avatar +
-        "?size=512";
-    });
-  });
   return {
     props: {
       posts: database,
-      avatarURL: avatarURL,
     },
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
