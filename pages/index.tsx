@@ -9,8 +9,6 @@ import { queryDatabaseTime } from "../lib/notion";
 import { SiNextDotJs, SiTailwindcss } from "react-icons/si";
 import MetaTags from "../components/MetaTags";
 import { useEffect, useState } from "react";
-import Avatar from "../public/avatar.png";
-import Image from "next/image";
 
 export default function Home({ posts }) {
   return (
@@ -31,10 +29,10 @@ export default function Home({ posts }) {
             </span>
           </div>
         </div>
-        <div className="mt-16 mb-16 sm:mt-32 mx-auto sm:animate-bounce">
-          <Image
+        <div className="mt-24 mb-16 sm:mt-32 mx-auto animate-bounce">
+          <img
             className="w-60 h-60 rounded-full mx-auto sm:hover:animate-spin"
-            src={Avatar}
+            src="/avatar.png"
             alt="Avatar"
           />
         </div>
