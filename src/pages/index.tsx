@@ -1,14 +1,15 @@
 import * as React from "react";
 import type { HeadFC } from "gatsby";
+import Link from "../components/Link";
 
 const IndexPage = () => {
   return (
-    <main>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+    <main className="p-20">
+      <Link href="/">Test</Link>
     </main>
   );
 };
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <title>Kanishq Kancharla</title>;
