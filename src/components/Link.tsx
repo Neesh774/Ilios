@@ -9,8 +9,8 @@ const Link = ({
   children: React.ReactNode;
 }) => {
   return (
-    <NextLink className="styled-link" href={href}>
-      <a>{children}</a>
+    <NextLink href={href}>
+      <a className="styled-link">{children}</a>
     </NextLink>
   );
 };

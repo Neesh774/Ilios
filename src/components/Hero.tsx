@@ -4,8 +4,6 @@ import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
 import IconButton from "./IconButton";
 import { motion } from "framer-motion";
 
-const MotionIconButton = motion(IconButton);
-
 const Hero = () => {
   const item = {
     hidden: { translateY: 20, opacity: 0 },
@@ -46,7 +44,7 @@ const Hero = () => {
       variants={parentItem}
     >
       <motion.p variants={item} className="font-mono text-md text-highlight">
-        Nice to meet you! I'm
+        Hi, I'm
       </motion.p>
       <motion.h1
         variants={item}
@@ -56,13 +54,13 @@ const Hero = () => {
       </motion.h1>
       <motion.h1
         variants={item}
-        className="font-serif text-text-300/70 text-3xl lg:text-5xl xl:text-7xl font-semibold"
+        className="font-serif text-text-200/70 text-3xl lg:text-5xl xl:text-7xl font-semibold"
       >
         I'm a web developer.
       </motion.h1>
       <motion.p
         variants={item}
-        className="text-text-200 md:w-3/5 text-xl font-body"
+        className="text-text-300 md:w-3/5 text-xl font-body"
       >
         I'm a {(new Date().getFullYear() - 2006).toString()} year old web
         developer, and I love building awesome websites and apps.
@@ -79,18 +77,18 @@ const Hero = () => {
         }}
         className="flex flex-row gap-4 mt-4"
       >
-        <MotionIconButton variants={buttonItem}>
+        <IconButton variants={buttonItem}>
           <FiGithub />
-        </MotionIconButton>
-        <MotionIconButton variants={buttonItem}>
+        </IconButton>
+        <IconButton variants={buttonItem}>
           <FiLinkedin />
-        </MotionIconButton>
-        <MotionIconButton variants={buttonItem}>
+        </IconButton>
+        <IconButton variants={buttonItem}>
           <FiTwitter />
-        </MotionIconButton>
-        <MotionIconButton variants={buttonItem}>
+        </IconButton>
+        <IconButton variants={buttonItem}>
           <FiMail />
-        </MotionIconButton>
+        </IconButton>
       </motion.div>
     </motion.div>
   );

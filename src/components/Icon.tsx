@@ -8,7 +8,12 @@ const Icon = ({
   className?: string;
   children: React.ReactElement;
 }) => {
-  return <children.type className="w-5 h-5 m-2 text-highlight" />;
+  return (
+    <children.type
+      {...children.props}
+      className={`w-5 h-5 m-2 text-highlight ${children.props.className ?? ""}`}
+    />
+  );
 };
 
 export default Icon;

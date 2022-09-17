@@ -1,22 +1,22 @@
+import { AnimationProps, motion } from "framer-motion";
 import * as React from "react";
 
-const Button = ({
-  label,
-  size,
-  className,
-}: {
-  label: string;
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
-  className?: string;
-}) => {
+const Button = (
+  props: {
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+    className?: string;
+    children: React.ReactNode;
+  } & AnimationProps
+) => {
   return (
-    <button
+    <motion.button
+      {...props}
       className={`px-6 py-2 border-2 rounded-md border-highlight text-highlight cursor-pointer hover:bg-highlightTint font-mono text-${
-        size ? size : "sm"
-      } ${className}`}
+        props.size ? props.size : "sm"
+      } ${props.className}`}
     >
-      {label}
-    </button>
+      {props.children}
+    </motion.button>
   );
 };
 
