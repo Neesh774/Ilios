@@ -17,9 +17,11 @@ module.exports = {
         highlightTint: "#FFCA3A2A",
         secondary: "#BF4342",
         text: {
-          300: "#b5bac8",
-          200: "#85878d",
-          100: "#d9d9d9",
+          500: "#999596",
+          400: "#B6B3B4",
+          300: "#C2C0C1",
+          200: "#DBD9DA",
+          100: "#E7E6E6",
         },
       },
       fontFamily: {
