@@ -8,9 +8,7 @@ import { FaDiscord } from "react-icons/fa";
 import { useRef } from "react";
 import Head from "next/head";
 
-const About = () => {
-  const dragArea = useRef(null);
-
+const About = ({ bodyArea }: { bodyArea: any }) => {
   const { data: activity } = useLanyard(
     process.env.NEXT_PUBLIC_DISCORD_ID as string
   );
@@ -39,7 +37,7 @@ const About = () => {
         initial="hidden"
         variants={sectionVariants}
         whileInView="show"
-        viewport={{ once: true, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.4 }}
         className="flex flex-row gap-6 w-full"
         id="about"
       >
@@ -50,7 +48,7 @@ const About = () => {
             </a>
             <span className="font-bold">About Me</span>
           </h1>
-          <p className="text-zinc-400 text-[1.06rem]">
+          <p className="text-zinc-400 text-[1.06rem] font-body">
             Hey there! Welcome to Ilios. My name is Kanishq, and I'm currently a
             senior in high school. I love to create things, and I'm passionate
             about web development. I'm currently working on a few projects, and
@@ -68,17 +66,18 @@ const About = () => {
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
         </div>
-        <div className="flex justify-center items-center w-1/2" ref={dragArea}>
+        <div className="flex justify-center items-center w-1/2">
           {activity && (
             <div className="flex flex-col gap-4">
               <motion.img
                 drag
-                dragConstraints={dragArea}
+                dragConstraints={bodyArea}
+                whileDrag={{ scale: 1.1 }}
                 className="w-64 h-64 shadow-lg shadow-background-800/60 rounded-full"
                 src={`https://cdn.discordapp.com/avatars/${activity.discord_user.id}/${activity.discord_user.avatar}.png?size=256`}
               />
               {activity.spotify && (
-                <div className="flex flex-row px-3 py-2 rounded-full bg-zinc-900/60 gap-2 text-sm z-10">
+                <div className="flex flex-row items-center justify-center px-3 py-2 rounded-full bg-zinc-900/60 gap-2 text-sm z-10 max-w-72">
                   <img
                     src={activity.spotify.album_art_url}
                     className="w-12 h-12 rounded-full border-[#1db954] border-2"

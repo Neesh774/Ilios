@@ -1,9 +1,31 @@
-import { motion } from "framer-motion";
-import Button from "./Button";
+import { motion, useScroll } from "framer-motion";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const links = ["about", "projects", "contact"];
 
 const Nav = () => {
+  const [hidden, setHidden] = useState(false);
+  const [flat, setFlat] = useState(true);
+  const { scrollY, scrollYProgress } = useScroll();
+
+  useEffect(() => {
+    return scrollY.onChange(() => {
+      // set visible if scrolly is going up
+      if (scrollY.get() > scrollY.getPrevious()) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+      if (scrollYProgress.get() > 0.1) {
+        setFlat(false);
+      } else {
+        setFlat(true);
+        setHidden(false);
+      }
+    });
+  }, []);
+
   const navVariants = {
     hidden: { opacity: 0, translateY: -40 },
     show: {
@@ -43,8 +65,10 @@ const Nav = () => {
     <motion.nav
       variants={navVariants}
       initial="hidden"
-      whileInView="show"
-      className="py-2 sticky mx-auto w-full flex justify-center bg-background-800"
+      animate={hidden ? "hidden" : "show"}
+      className={`py-2 pt-8 sticky -top-6 mx-auto w-full flex justify-center bg-background-800 transition-shadow duration-700 ${
+        !flat ? "shadow-lg" : ""
+      }`}
     >
       <div className="flex flex-row gap-8">
         {links.map((link, i) => (
