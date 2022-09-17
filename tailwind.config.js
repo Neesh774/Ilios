@@ -8,10 +8,10 @@ module.exports = {
     extend: {
       colors: {
         background: {
-          600: "#414562",
-          700: "#313349",
-          800: "#212231",
-          900: "#101118",
+          600: "#535051",
+          700: "#494647",
+          800: "#343233",
+          900: "#2E2C2D",
         },
         highlight: "#ffca3a",
         highlightTint: "#FFCA3A2A",
@@ -23,8 +23,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ["Source Sans Pro", "sans-serif"],
+        serif: ["Source Sans Pro", "system-ui", "sans-serif"],
         monospace: ["Space Mono", "monospace"],
+        body: ["Montserrat", "system-ui", "sans-serif"],
       },
     },
   },

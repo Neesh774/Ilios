@@ -1,6 +1,4 @@
-@tailwind base;
-
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;700;800;900&family=Space+Mono&family=Montserrat:wght@400&display=swap");
 
 :root {
   --primary: #ffca3a;
@@ -50,5 +48,6 @@
   }
 }
 
+@tailwind base;
 @tailwind components;
 @tailwind utilities;

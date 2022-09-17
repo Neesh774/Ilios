@@ -1,4 +1,4 @@
-import { Link as GatsbyLink } from "gatsby";
+import NextLink from "next/link";
 import * as React from "react";
 
 const Link = ({
@@ -9,9 +9,9 @@ const Link = ({
   children: React.ReactNode;
 }) => {
   return (
-    <GatsbyLink className="styled-link" to={href}>
-      {children}
-    </GatsbyLink>
+    <NextLink className="styled-link" href={href}>
+      <a>{children}</a>
+    </NextLink>
   );
 };
 
