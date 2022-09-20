@@ -66,7 +66,7 @@ const Nav = () => {
       variants={navVariants}
       initial="hidden"
       animate={hidden ? "hidden" : "show"}
-      className={`py-2 pt-8 sticky -top-6 mx-auto w-full flex justify-center bg-background-800 transition-shadow duration-700 z-20 ${
+      className={`py-2 pt-8 sticky -top-6 mx-auto w-full flex justify-center bg-background-800 transition-shadow duration-700 z-50 ${
         !flat ? "shadow-lg" : ""
       }`}
     >
