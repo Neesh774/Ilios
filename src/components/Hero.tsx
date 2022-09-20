@@ -3,8 +3,10 @@ import Icon from "./Icon";
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
 import IconButton from "./IconButton";
 import { motion } from "framer-motion";
+import { useRouter } from "next/router";
 
 const Hero = () => {
+  const router = useRouter();
   const item = {
     hidden: { translateY: 20, opacity: 0 },
     show: {
@@ -38,7 +40,7 @@ const Hero = () => {
 
   return (
     <motion.div
-      className="flex flex-col gap-6"
+      className="flex flex-col gap-6 h-[50vh]"
       initial="hidden"
       animate="show"
       variants={parentItem}
@@ -48,7 +50,7 @@ const Hero = () => {
       </motion.p>
       <motion.h1
         variants={item}
-        className="font-serif text-text-100 text-4xl lg:text-6xl xl:text-8xl font-semibold"
+        className="font-serif text-text-100 text-4xl md:text-6xl xl:text-8xl font-semibold"
       >
         Kanishq Kancharla.
       </motion.h1>
@@ -60,7 +62,7 @@ const Hero = () => {
       </motion.h1>
       <motion.p
         variants={item}
-        className="text-text-300 md:w-3/5 text-xl font-body"
+        className="text-text-300 md:w-3/5 md:text-xl font-body"
       >
         I'm a {(new Date().getFullYear() - 2006).toString()} year old web
         developer, and I love building awesome websites and apps.
@@ -77,16 +79,28 @@ const Hero = () => {
         }}
         className="flex flex-row gap-4 mt-4"
       >
-        <IconButton variants={buttonItem}>
+        <IconButton
+          variants={buttonItem}
+          onClick={() => router.push("https://github.com/Neesh774")}
+        >
           <FiGithub />
         </IconButton>
-        <IconButton variants={buttonItem}>
+        <IconButton
+          variants={buttonItem}
+          onClick={() => router.push("https://www.linkedin.com/in/kanishqk/")}
+        >
           <FiLinkedin />
         </IconButton>
-        <IconButton variants={buttonItem}>
+        <IconButton
+          variants={buttonItem}
+          onClick={() => router.push("https://twitter.com/Neesh774")}
+        >
           <FiTwitter />
         </IconButton>
-        <IconButton variants={buttonItem}>
+        <IconButton
+          variants={buttonItem}
+          onClick={() => router.push("mailto:Kanishq0106@gmail.com")}
+        >
           <FiMail />
         </IconButton>
       </motion.div>

@@ -17,7 +17,7 @@ const Nav = () => {
       } else {
         setHidden(false);
       }
-      if (scrollYProgress.get() > 0.1) {
+      if (scrollYProgress.get() + scrollYProgress.getVelocity() > 0.1) {
         setFlat(false);
       } else {
         setFlat(true);
@@ -66,11 +66,11 @@ const Nav = () => {
       variants={navVariants}
       initial="hidden"
       animate={hidden ? "hidden" : "show"}
-      className={`py-2 pt-8 sticky -top-6 mx-auto w-full flex justify-center bg-background-800 transition-shadow duration-700 ${
+      className={`py-2 pt-8 sticky -top-6 mx-auto w-full flex justify-center bg-background-800 transition-shadow duration-700 z-20 ${
         !flat ? "shadow-lg" : ""
       }`}
     >
-      <div className="flex flex-row gap-8">
+      <div className="flex flex-row gap-4 md:gap-8">
         {links.map((link, i) => (
           <motion.a
             key={i}
