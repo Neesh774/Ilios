@@ -68,16 +68,17 @@ const Projects = ({
   const imageVariants = {
     hidden: {
       opacity: 0,
-      translateY: -100,
+      rotateX: 90,
     },
     show: {
       opacity: 1,
-      translateY: 0,
+      rotateX: 0,
       transition: {
         type: "spring",
         bounce: 0.7,
         velocity: 30,
         delay: 0.8,
+        duration: 0.8,
       },
     },
     hover: {
@@ -98,7 +99,7 @@ const Projects = ({
       opacity: 1,
       transition: {
         staggerChildren: 0.05,
-        delayChildren: 0.8,
+        delayChildren: 1.2,
       },
     },
   };
@@ -235,7 +236,6 @@ const Projects = ({
                       initial="hidden"
                       viewport={{ once: true, amount: 0.4 }}
                       whileInView="show"
-                      whileHover="hover"
                       src={imageUrl}
                       alt={projectTitle}
                     />
@@ -263,6 +263,7 @@ const Projects = ({
               </div>
               <a href={link}>
                 <motion.img
+                  style={{ originY: 0 }}
                   className={`absolute w-7/12 lg:w-1/2 object-cover top-40 lg:top-32 hidden md:block ${
                     i % 2 == 0
                       ? "lg:left-1/4 left-1/3"
