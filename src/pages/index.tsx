@@ -5,7 +5,7 @@ import About from "../components/About";
 import Hero from "../components/Hero";
 import MetaTags from "../components/MetaTags";
 import Nav from "../components/Nav";
-import Projects from "../components/Projects";
+import Projects from "../components/Projects/Projects";
 import { notionClient } from "../utils/client";
 
 const IndexPage = ({
@@ -64,6 +64,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         },
       ],
     },
+    sorts: [
+      {
+        property: "Date",
+        direction: "descending",
+      },
+    ],
   });
   return {
     props: {
