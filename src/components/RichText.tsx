@@ -1,5 +1,5 @@
 import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
-
+import Link from "./Link";
 const RichText = ({ text }: { text: RichTextItemResponse[] }) => {
   if (!text) {
     return <></>;
@@ -27,12 +27,7 @@ const RichText = ({ text }: { text: RichTextItemResponse[] }) => {
             style={color !== "default" ? { color } : {}}
           >
             {text.link ? (
-              <a
-                href={text.link.url}
-                className="underline hover:text-starOrange transition-all ease-in-out duration-100"
-              >
-                {text.content}
-              </a>
+              <Link href={text.link.url}>{text.content}</Link>
             ) : (
               text.content
             )}
