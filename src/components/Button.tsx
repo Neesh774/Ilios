@@ -6,7 +6,7 @@ const Button = (
     size?: "xs" | "sm" | "md" | "lg" | "xl";
     className?: string;
     children: React.ReactNode;
-    onClick?: () => void;
+    onClick?: () => {};
   } & AnimationProps
 ) => {
   return (
