@@ -12,7 +12,7 @@ const Nav = () => {
   useEffect(() => {
     return scrollY.onChange(() => {
       // set visible if scrolly is going up
-      if (scrollY.get() > scrollY.getPrevious()) {
+      if (scrollY.get() > scrollY.getPrevious() - 10) {
         setHidden(true);
       } else {
         setHidden(false);
