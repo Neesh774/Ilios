@@ -70,10 +70,6 @@ export const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
           transition={{
             x: { type: "spring", stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },
-            delay: 0.1,
-            rotateZ: {
-              delay: 0,
-            },
           }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
