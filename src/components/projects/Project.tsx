@@ -34,7 +34,7 @@ const Project = forwardRef(
         : "";
     return (
       <div
-        className="flex flex-col lg:flex-row bg-background-700 rounded-lg absolute top-2 left-0 right-0 max-w-full"
+        className="flex flex-col lg:flex-row bg-background-700 rounded-lg absolute top-2 left-0 right-0 max-w-full select-none"
         ref={ref}
       >
         <img
