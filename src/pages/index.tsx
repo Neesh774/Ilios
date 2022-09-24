@@ -5,7 +5,7 @@ import About from "../components/About";
 import Hero from "../components/Hero";
 import MetaTags from "../components/MetaTags";
 import Nav from "../components/Nav";
-import Projects from "../components/Projects";
+import Projects from "../components/projects/Projects";
 import { notionClient } from "../utils/client";
 
 const IndexPage = ({
@@ -22,7 +22,7 @@ const IndexPage = ({
       <main className="bg-background-800">
         <Nav />
         <div
-          className="pb-12 pt-20 px-8 md:pb-12 md:pt-36 md:px-24 lg:pb-16 lg:pt-48 lg:px-36 xl:py-72 xl:px-60 flex flex-col gap-40 overflow-hidden"
+          className="pb-12 pt-20 px-8 md:pb-12 md:pt-36 md:px-24 lg:pb-16 lg:pt-48 lg:px-36 xl:py-72 xl:px-60 2xl:px-[20%] flex flex-col gap-40 overflow-hidden"
           ref={bodyArea}
         >
           <Hero />
@@ -48,6 +48,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   });
   const { results: projects } = await notionClient.databases.query({
     database_id: process.env.NOTION_DB_ID as string,
+    page_size: 10,
     filter: {
       and: [
         {

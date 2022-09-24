@@ -1,12 +1,10 @@
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { motion } from "framer-motion";
-import useMediaQuery from "../utils/useMediaQuery";
-import IconButton from "./IconButton";
-import Link from "./Link";
-import RichText from "./RichText";
+import IconButton from "../IconButton";
+import RichText from "../RichText";
 import { useRouter } from "next/router";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-import Image from "next/image";
+import { Carousel } from "./Carousel";
 
 const Projects = ({
   featured,
@@ -16,7 +14,6 @@ const Projects = ({
   projects: PageObjectResponse[];
 }) => {
   const router = useRouter();
-  const matches = useMediaQuery("(min-width: 768px)");
 
   const sectionVariants = {
     hidden: {
@@ -219,7 +216,7 @@ const Projects = ({
                             <motion.span
                               key={i}
                               variants={techVariants}
-                              className="text-highlight font-body font-medium text-xs bg-background-700 shadow-lg px-2 py-1 rounded-[.250rem] z-10"
+                              className="text-highlight font-body font-medium text-xs bg-background-700 shadow-lg px-2 py-1 rounded-[.250rem] z-10 cursor-default"
                             >
                               {tech.name}
                             </motion.span>
@@ -264,7 +261,7 @@ const Projects = ({
               <a href={link}>
                 <motion.img
                   style={{ originY: 0 }}
-                  className={`absolute w-7/12 lg:w-1/2 object-cover top-40 lg:top-32 hidden md:block ${
+                  className={`absolute w-96 object-cover top-40 lg:top-32 hidden md:block ${
                     i % 2 == 0
                       ? "lg:left-1/4 left-1/3"
                       : "lg:right-1/4 right-1/3"
@@ -281,6 +278,15 @@ const Projects = ({
             </motion.div>
           );
         })}
+      </div>
+      <div className="bg-background-900 rounded-md justify-center items-center lg:mx-4 flex flex-col py-8 px-8 lg:px-16">
+        <h1 className="text-text-300 font-semibold text-2xl">
+          But wait, there's more!
+        </h1>
+        <h3 className="text-text-500 flex flex-row gap-1 text-xl font-semibold pl-2">
+          Here's some of the other cool stuff I've worked on.
+        </h3>
+        <Carousel projects={projects} />
       </div>
     </motion.div>
   );
