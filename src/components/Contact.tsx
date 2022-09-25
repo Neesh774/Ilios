@@ -78,7 +78,7 @@ const Contact = ({ activity }: { activity: Data | undefined }) => {
   };
 
   return (
-    <div className="lg:w-3/5 mx-2 relative" id="contact">
+    <div className="lg:w-3/5 mx-2 lg:mx-auto relative" id="contact">
       <div className="flex flex-col mb-4 gap-2">
         <h1 className="text-text-100 flex flex-row gap-1 text-3xl">
           <a href="#contact" className="text-highlight">
