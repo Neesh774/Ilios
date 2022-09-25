@@ -36,6 +36,7 @@ module.exports = {
         serif: ["Source Sans Pro", "system-ui", "sans-serif"],
         monospace: ["Space Mono", "monospace"],
         body: ["Montserrat", "system-ui", "sans-serif"],
+        discord: ["Whitney", "Roboto", "Helvetica Neue", "Arial", "sans-serif"],
       },
     },
   },
