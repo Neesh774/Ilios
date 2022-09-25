@@ -47,7 +47,7 @@ const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
 
-export const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
+const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
   const imageIndex = wrap(0, projects.length, page);
@@ -116,3 +116,5 @@ export const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
     </div>
   );
 };
+
+export default Carousel;

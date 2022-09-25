@@ -4,7 +4,8 @@ import IconButton from "../IconButton";
 import RichText from "../RichText";
 import { useRouter } from "next/router";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
-import { Carousel } from "./Carousel";
+import Carousel from "./Carousel";
+import Image from "../Image";
 
 const Projects = ({
   featured,
@@ -227,15 +228,15 @@ const Projects = ({
                 </div>
                 <div className="flex flex-col justify-center items-center md:contents">
                   <a href={link}>
-                    <motion.img
+                    <motion.div
                       className="w-5/6 sm:w-2/3 mx-auto relative sm:top-8 object-cover md:hidden"
                       variants={imageVariants}
                       initial="hidden"
                       viewport={{ once: true, amount: 0.4 }}
                       whileInView="show"
-                      src={imageUrl}
-                      alt={projectTitle}
-                    />
+                    >
+                      <Image src={imageUrl} alt={projectTitle} layout="fill" />
+                    </motion.div>
                   </a>
                   <p className="bg-background-700 shadow-lg text-text-300 font-body text-sm font-[500] px-6 py-4 min-h-fit sm:w-4/5 md:w-5/6 rounded-[.250rem] z-10">
                     {project.properties.Description.type == "rich_text" && (

@@ -1,5 +1,6 @@
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { motion } from "framer-motion";
+import Image from "../Image";
 import { useRouter } from "next/router";
 import { forwardRef } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
@@ -37,11 +38,14 @@ const Project = forwardRef(
         className="flex flex-col lg:flex-row bg-background-700 rounded-lg absolute top-2 left-0 right-0 max-w-full select-none"
         ref={ref}
       >
-        <img
-          src={imageUrl}
-          alt={projectTitle}
-          className="object-cover lg:w-3/5 h-40 lg:h-64 rounded-t-lg lg:rounded-t-none lg:rounded-l-lg pointer-events-none"
-        />
+        <div className="relative lg:w-3/5 h-40 lg:h-64 rounded-t-lg lg:rounded-t-none lg:rounded-l-lg pointer-events-none">
+          <Image
+            layout="fill"
+            src={imageUrl}
+            alt={projectTitle}
+            className="object-cover"
+          />
+        </div>
         <div className="flex flex-col lg:w-2/5 p-4 gap-2 justify-between h-56 lg:h-auto">
           <div>
             <h2 className="font-bold text-xl text-secondary-100">

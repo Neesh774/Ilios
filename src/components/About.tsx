@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-import { useLanyard } from "use-lanyard";
+import { Data, useLanyard } from "use-lanyard";
 import Link from "./Link";
 import {
   SiNextdotjs,
@@ -12,10 +12,13 @@ import {
 } from "react-icons/si";
 import useMediaQuery from "../utils/useMediaQuery";
 
-const About = ({ bodyArea }: { bodyArea: any }) => {
-  const { data: activity } = useLanyard(
-    process.env.NEXT_PUBLIC_DISCORD_ID as string
-  );
+const About = ({
+  bodyArea,
+  activity,
+}: {
+  bodyArea: any;
+  activity: Data | undefined;
+}) => {
   const matches = useMediaQuery("(min-width: 768px)");
 
   const sectionVariants = {
@@ -68,7 +71,7 @@ const About = ({ bodyArea }: { bodyArea: any }) => {
           initial="hidden"
           variants={sectionVariants}
           whileInView="show"
-          viewport={{ once: true, amount: matches ? 0.4 : 0.1 }}
+          viewport={{ once: true, amount: matches ? 0.6 : 0.1 }}
           className="flex flex-col gap-4 px-1 lg:w-1/2 lg:px-0"
         >
           <motion.div variants={childVariants}>
@@ -125,6 +128,10 @@ const About = ({ bodyArea }: { bodyArea: any }) => {
                 dragConstraints={bodyArea}
                 whileDrag={{ scale: 1.1 }}
                 dragElastic={0.05}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.4 }}
+                viewport={{ once: true, amount: 0.6 }}
                 className="lg:w-64 lg:h-64 md:w-48 md:h-48 w-32 h-32 shadow-lg shadow-background-800/60 z-40 rounded-full"
                 src={`https://cdn.discordapp.com/avatars/${activity.discord_user.id}/${activity.discord_user.avatar}.png?size=256`}
               />

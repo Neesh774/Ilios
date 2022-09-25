@@ -7,6 +7,8 @@ import MetaTags from "../components/MetaTags";
 import Nav from "../components/Nav";
 import Projects from "../components/projects/Projects";
 import { notionClient } from "../utils/client";
+import Contact from "../components/Contact";
+import { useLanyard } from "use-lanyard";
 
 const IndexPage = ({
   featured,
@@ -16,6 +18,10 @@ const IndexPage = ({
   projects: PageObjectResponse[];
 }) => {
   const bodyArea = useRef(null);
+  const { data: activity } = useLanyard(
+    process.env.NEXT_PUBLIC_DISCORD_ID as string
+  );
+
   return (
     <>
       <MetaTags title="Kanishq Kancharla" description="" />
@@ -26,8 +32,9 @@ const IndexPage = ({
           ref={bodyArea}
         >
           <Hero />
-          <About bodyArea={bodyArea} />
+          <About activity={activity} bodyArea={bodyArea} />
           <Projects featured={featured} projects={projects} />
+          <Contact activity={activity} />
         </div>
       </main>
     </>
