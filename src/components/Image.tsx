@@ -1,18 +1,21 @@
 import NextImage from "next/image";
 import { useState } from "react";
+import Loader from "./Loader";
+
+const toBase64 = (str: string) =>
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
+    : window.btoa(str);
 
 const Image = (props: React.ComponentProps<typeof NextImage>) => {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
     <div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <Loader />
+      </div>
       <NextImage
         {...props}
-        onLoad={() => setIsLoading(false)}
-        className={`${props.className} duration-500 ease-in-out ${
-          isLoading ? "blur-xl scale-110" : "blur-0 scale-100"
-        }
-          `}
+        className={`${props.className} duration-500 ease-in-out`}
       />
     </div>
   );
