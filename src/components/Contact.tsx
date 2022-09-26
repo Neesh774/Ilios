@@ -31,7 +31,7 @@ export async function fetcher<T>(url: string, init?: RequestInit): Promise<T> {
 const Contact = ({ activity }: { activity: Data | undefined }) => {
   const [text, setText] = useState("Send");
   return (
-    <div className="w-3/5 mx-auto" id="contact">
+    <div className="md:w-3/5 mx-auto" id="contact">
       <div className="flex flex-col mb-4 gap-2">
         <h1 className="text-text-100 flex flex-row gap-1 text-3xl">
           <a href="#contact" className="text-highlight">
@@ -83,7 +83,7 @@ const Contact = ({ activity }: { activity: Data | undefined }) => {
             type="email"
             name="email"
             id="email"
-            className="block w-full rounded-md text-text-300 bg-background-700 autofill:!bg-background-700 py-1 px-4 focus:outline-none focus:ring focus:ring-highlight transition-all duration-400"
+            className="block w-4/5 md:w-2/5 rounded-md text-text-300 bg-background-700 autofill:!bg-background-700 py-1 px-4 focus:outline-none focus:ring-2 focus:ring-highlight transition-all duration-400"
           />
         </label>
 
@@ -96,30 +96,33 @@ const Contact = ({ activity }: { activity: Data | undefined }) => {
             rows={5}
             name="body"
             minLength={10}
+            maxLength={500}
             id="body"
-            className="block w-full resize-none text-text-300 rounded-md bg-background-700 py-1 px-4 focus:outline-none focus:ring focus:ring-highlight transition-all duration-400"
+            className="block w-full resize-none text-text-300 rounded-md bg-background-700 py-1 px-4 focus:outline-none focus:ring-2 focus:ring-highlight transition-all duration-400"
           />
         </label>
 
-        <div className="flex flex-row gap-2 mt-4 items-center justify-between">
+        <div className="flex flex-col md:flex-row gap-2 mt-4 items-start md:items-center justify-between">
           <Button>{text}</Button>
           {activity && (
-            <span className="flex flex-row text-text-400 font-mono text-sm items-center">
-              I'm currently
-              <a
-                href={`https://discord.com/users/${
-                  process.env.NEXT_PUBLIC_DISCORD_ID as string
-                }`}
-                className="flex flex-row gap-2 items-center px-2 py-1 bg-[#36393D] rounded-full mx-2"
-              >
-                <img
-                  src={`/${activity?.discord_status}.png`}
-                  className="w-4 h-4"
-                />
-                {activity?.discord_status}
-              </a>
-              on Discord
-            </span>
+            <a
+              href={`https://discord.com/users/${
+                process.env.NEXT_PUBLIC_DISCORD_ID as string
+              }`}
+              className="border-b-2 border-spacing-0 border-text-300 text-text-400 pb-1 hover:border-[#4E5AF0] hover:text-text-100 transition-all duration-500 group"
+            >
+              <span className="flex flex-row font-mono text-xs md:text-sm items-center">
+                I'm currently
+                <div className="flex flex-row gap-2 items-center px-2 py-0.5 bg-[#36393D] rounded-full mx-2 group-hover:bg-[#4E5AF0]transition-all duration-100">
+                  <img
+                    src={`/${activity?.discord_status}.png`}
+                    className="w-3 h-3"
+                  />
+                  {activity?.discord_status}
+                </div>
+                on Discord
+              </span>
+            </a>
           )}
         </div>
       </form>
