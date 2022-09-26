@@ -2,9 +2,8 @@ import { z } from 'zod';
 import { api } from '../../utils/api';
 
 const schema = z.object({
-    name: z.string(),
-    email: z.string(),
-    body: z.string(),
+    email: z.string().email(),
+    body: z.string().max(500).min(10),
 });
 
 export default api({
@@ -18,7 +17,7 @@ export default api({
                     {
                         description: body.body,
                         author: {
-                            name: `${body.name} - ${body.email}`,
+                            name: body.email,
                         },
                         color: 16763450,
                         fields: [

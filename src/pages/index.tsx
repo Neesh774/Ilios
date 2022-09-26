@@ -7,9 +7,8 @@ import MetaTags from "../components/MetaTags";
 import Nav from "../components/Nav";
 import Projects from "../components/projects/Projects";
 import { notionClient } from "../utils/client";
+import Contact from "../components/Contact";
 import { useLanyard } from "use-lanyard";
-import dynamic from "next/dynamic";
-const Contact = dynamic(() => import("../components/Contact"), { ssr: false });
 
 const IndexPage = ({
   featured,

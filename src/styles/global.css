@@ -52,19 +52,6 @@ html {
   }
 }
 
-.discord-input::-webkit-scrollbar {
-  display: none;
-}
-
-.scroller * {
-  overflow-anchor: none;
-}
-
-.anchor {
-  overflow-anchor: auto;
-  height: 1px;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
