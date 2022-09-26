@@ -9,7 +9,7 @@ const IconButton = (
   return (
     <motion.button
       {...props}
-      className="border-2 rounded-lg border-highlight cursor-pointer hover:shadow-lg transition-all duration-300 hover:shadow-highlight/50 active:shadow-md"
+      className="border-2 rounded-lg border-highlight cursor-pointer hover:bg-highlightTint"
       onClick={props.onClick}
     >
       <Icon>
