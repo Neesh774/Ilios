@@ -1,4 +1,5 @@
 import { motion, useScroll } from "framer-motion";
+import Image from "next/image";
 import { useEffect } from "react";
 import { useState } from "react";
 
@@ -12,12 +13,12 @@ const Nav = () => {
   useEffect(() => {
     return scrollY.onChange(() => {
       // set visible if scrolly is going up
-      if (scrollY.get() > scrollY.getPrevious() - 10) {
+      if (scrollY.getVelocity() > -100) {
         setHidden(true);
       } else {
         setHidden(false);
       }
-      if (scrollYProgress.get() + scrollYProgress.getVelocity() > 0.1) {
+      if (scrollYProgress.get() > 0.1) {
         setFlat(false);
       } else {
         setFlat(true);
@@ -66,10 +67,13 @@ const Nav = () => {
       variants={navVariants}
       initial="hidden"
       animate={hidden ? "hidden" : "show"}
-      className={`py-2 pt-8 sticky -top-6 mx-auto w-full flex justify-center bg-background-800 transition-shadow duration-700 z-50 ${
+      className={`py-2 pt-8 px-4 md:px-6 lg:px-8 sticky -top-6 mx-auto w-full flex justify-between items-center bg-background-800 transition-shadow duration-700 z-50 ${
         !flat ? "shadow-lg" : ""
       }`}
     >
+      <a href="/">
+        <Image src="/Favicon.png" alt="favicon" width={40} height={40} />
+      </a>
       <div className="flex flex-row gap-4 md:gap-8">
         {links.map((link, i) => (
           <motion.a
@@ -86,6 +90,7 @@ const Nav = () => {
           </motion.a>
         ))}
       </div>
+      <div className="hidden lg:block"></div>
     </motion.nav>
   );
 };
