@@ -83,7 +83,7 @@ const Nav = () => {
             initial="hidden"
             custom={i}
             className="gap-1 py-1 px-2 flex flex-row font-mono text-sm text-text-100 hover:text-highlight transition-all duration-300"
-            href={`#${link}`}
+            href={`/#${link}`}
           >
             <span className="text-highlight">#</span>
             <span>{link}</span>

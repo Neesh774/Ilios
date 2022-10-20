@@ -6,7 +6,7 @@ import { forwardRef } from "react";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 import Icon from "../Icon";
 import IconButton from "../IconButton";
-import RichText from "../RichText";
+import RichText from "../notion/RichText";
 
 const Project = forwardRef(
   ({ project }: { project: PageObjectResponse }, ref: any) => {

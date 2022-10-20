@@ -4,6 +4,7 @@ import { FiGithub, FiLinkedin, FiTwitter, FiMail } from "react-icons/fi";
 import IconButton from "./IconButton";
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
+import Button from "./Button";
 
 const Hero = () => {
   const router = useRouter();
@@ -103,6 +104,21 @@ const Hero = () => {
         >
           <FiMail />
         </IconButton>
+      </motion.div>
+      <motion.div
+        animate={{
+          translateY: 0,
+          opacity: 1,
+        }}
+        initial={{
+          translateY: 20,
+          opacity: 0,
+        }}
+        transition={{
+          delay: 1.6,
+        }}
+      >
+        <Button onClick={() => router.push("/blog")}>Check out my blog</Button>
       </motion.div>
     </motion.div>
   );

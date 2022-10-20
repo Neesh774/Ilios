@@ -1,7 +1,7 @@
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { motion } from "framer-motion";
 import IconButton from "../IconButton";
-import RichText from "../RichText";
+import RichText from "../notion/RichText";
 import { useRouter } from "next/router";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Carousel from "./Carousel";
@@ -238,7 +238,7 @@ const Projects = ({
                       alt={projectTitle}
                     />
                   </a>
-                  <p className="bg-background-700 shadow-lg text-text-300 font-body text-sm font-[500] px-6 py-4 min-h-fit sm:w-4/5 md:w-5/6 rounded-[.250rem] z-10">
+                  <p className="bg-background-700 shadow-lg text-text-300 font-body text-sm font-[500] px-6 py-4 min-h-fit sm:w-4/5 md:min-w-fit xl:max-w-3xl rounded-[.250rem] z-10">
                     {project.properties.Description.type == "rich_text" && (
                       <RichText
                         text={project.properties.Description.rich_text}

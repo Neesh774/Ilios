@@ -7,8 +7,8 @@ import IconButton from "./IconButton";
 const Footer = () => {
   const router = useRouter();
   return (
-    <footer className="flex flex-row fixed bottom-0 left-0 right-0 -z-10 h-64 bg-background-900">
-      <div className="md:w-3/5 mx-auto my-10">
+    <footer className="flex flex-row fixed bottom-0 left-0 right-0 -z-10 h-72 bg-background-900">
+      <div className="md:w-3/5 mx-auto my-16">
         <h3 className="text-3xl text-text-200 font-semibold">
           Kanishq Kancharla
         </h3>
@@ -41,7 +41,12 @@ const Footer = () => {
               <FiMail />
             </IconButton>
           </div>
-          {/* <Button>Resume</Button> */}
+          <div className="flex flex-col md:flex-row gap-4">
+            <Button onClick={() => router.push("/blog")}>
+              Check out my blog
+            </Button>
+            <Button>Resume</Button>
+          </div>
         </div>
       </div>
     </footer>

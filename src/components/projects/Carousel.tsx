@@ -57,7 +57,7 @@ const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
   };
 
   return (
-    <div className="w-full relative flex flex-col justify-center h-[28rem] lg:h-80">
+    <div className="w-full max-w-96 relative flex flex-col justify-center h-[28rem] lg:h-80">
       <AnimatePresence initial={false} custom={direction}>
         <MotionProject
           key={page}

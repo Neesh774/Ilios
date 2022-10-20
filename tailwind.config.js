@@ -31,6 +31,7 @@ module.exports = {
           200: "#DBD9DA",
           100: "#E7E6E6",
         },
+        codebg: "#2B2B29",
       },
       fontFamily: {
         serif: ["Source Sans Pro", "system-ui", "sans-serif"],

@@ -1,9 +1,11 @@
 import "../styles/global.css";
+import "highlight.js/styles/atom-one-dark.css";
 import type { AppProps } from "next/app";
 import React from "react";
 import Head from "next/head";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
+import NextNProgress from "nextjs-progressbar";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,6 +15,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/Favicon.png" />
       </Head>
       <main className="bg-background-800">
+        <NextNProgress color="#ffca3a" />
         <Nav />
         <Component {...pageProps} />
         <Footer />

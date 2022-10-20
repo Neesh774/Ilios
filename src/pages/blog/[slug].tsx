@@ -1,7 +1,10 @@
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { GetStaticPaths, GetStaticProps } from "next";
 import MetaTags from "../../components/MetaTags";
+import Block from "../../components/notion/Block";
 import { notionClient } from "../../utils/client";
+import { notionColor } from "../../utils/color";
+import formatTime from "../../utils/formatTime";
 import { Blog } from "../../utils/types";
 
 export default function BlogPage({
@@ -17,6 +20,31 @@ export default function BlogPage({
         title={`${page.properties.Name.title[0].plain_text} | Kanishq Kancharla`}
         description={page.properties.Description.rich_text[0].plain_text}
       />
+      <div className="pb-4 pt-6 border-b-[1px] border-text-500 mb-64 md:pt-8 lg:pb-6 lg:pt-28 xl:py-36 xl:pb-16 flex flex-col gap-10 lg:gap-20 overflow-hidden min-h-[100vh] w-4/5 md:w-3/5 2xl:w-1/4 mx-auto">
+        <div className="flex flex-col gap-4">
+          <div className="text-sm text-highlight font-mono">
+            {formatTime(page.properties.Created.created_time)}
+          </div>
+          <h1 className="text-4xl font-bold text-text-200">
+            {page.properties.Name.title[0].plain_text}
+          </h1>
+          <div className="flex flex-row flex-wrap gap-2">
+            {page.properties.Tags.multi_select.map((tag) => (
+              <span
+                className="px-2 font-mono py-1 h-7 max-w-fit flex items-center bg-background-900 rounded-md text-sm"
+                style={{ color: notionColor(tag.color) }}
+              >
+                {tag.name}
+              </span>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-4 text-text-300 font-body text-lg">
+          {blocks.map((block) => (
+            <Block block={block} />
+          ))}
+        </div>
+      </div>
     </>
   );
 }
