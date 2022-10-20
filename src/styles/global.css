@@ -18,6 +18,10 @@ html {
   background-color: var(--background-900);
 }
 
+::selection {
+  background-color: #ffffff30;
+}
+
 @layer components {
   .styled-link {
     /* RESET */
@@ -32,6 +36,9 @@ html {
     color: var(--primary);
     vertical-align: bottom;
     transition: color 0.15s ease-out;
+    max-width: fit-content;
+    font: "Source Sans Pro", sans-serif;
+    font-weight: 500;
   }
 
   .styled-link::before {
@@ -58,12 +65,13 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background-700);
+  background: var(--background-900);
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--primary);
-  border-radius: 4px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 @tailwind base;
