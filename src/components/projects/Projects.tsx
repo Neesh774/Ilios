@@ -169,7 +169,7 @@ const Projects = ({
               key={i}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: "all" }}
+              viewport={{ once: true, amount: "some" }}
               variants={projectVariants}
               className={`flex mb-20 md:mb-44 relative ${
                 i % 2 == 0 ? "flex-row" : "flex-row-reverse"

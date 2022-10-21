@@ -41,8 +41,8 @@ export default function BlogPage({
             </div>
           </div>
           <div className="flex flex-col gap-4 text-text-300 font-body text-lg">
-            {blocks.map((block) => (
-              <Block block={block} />
+            {blocks.map((block, i) => (
+              <Block block={block} key={i} />
             ))}
           </div>
         </div>
