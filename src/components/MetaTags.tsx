@@ -16,11 +16,13 @@ const MetaTags = ({
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://ilioslabs.dev" />
       <meta property="og:site_name" content="Ilios" />
+      <meta property="og:image" content="/banner.png" />
       <meta property="og:locale" content="en_US" />
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content="@Neesh774" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content="/banner.png" />
 
       <link rel="icon" href="/favicon.ico" />
     </Head>
