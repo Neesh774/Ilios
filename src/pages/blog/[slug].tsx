@@ -1,5 +1,6 @@
 import { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { GetStaticPaths, GetStaticProps } from "next";
+import { FiArrowLeft } from "react-icons/fi";
 import MetaTags from "../../components/MetaTags";
 import Block from "../../components/notion/Block";
 import { notionClient } from "../../utils/client";
@@ -23,6 +24,12 @@ export default function BlogPage({
       <div className="pb-4 pt-6 border-b-[1px] border-text-500 mb-64 md:pt-8 lg:pb-6 lg:pt-28 xl:py-36 xl:pb-16 overflow-hidden min-h-[100vh]">
         <div className=" w-4/5 md:w-2/5 2xl:w-84 mx-auto flex flex-col gap-10 lg:gap-20">
           <div className="flex flex-col gap-4">
+            <div className="flex flex-row gap-2 text-highlight group">
+              <FiArrowLeft className="group-hover:-translate-x-1 transition-all duration-100" />
+              <a href="/blog" className="text-sm font-mono">
+                Back to Blog
+              </a>
+            </div>
             <div className="text-sm text-highlight font-mono">
               {formatTime(page.properties.Created.created_time)}
             </div>

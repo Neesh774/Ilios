@@ -51,11 +51,11 @@ const Project = forwardRef(
             <h2 className="font-bold text-xl text-secondary-100">
               <a href={link}>{projectTitle}</a>
             </h2>
-            <p className="text-text-400 text-sm">
+            <div className="text-text-400 text-sm">
               {project.properties.Description.type == "rich_text" && (
                 <RichText text={project.properties.Description.rich_text} />
               )}
-            </p>
+            </div>
           </div>
           <div className="flex flex-col gap-4">
             <div className="flex md:flex-row flex-wrap gap-3 justify-start">

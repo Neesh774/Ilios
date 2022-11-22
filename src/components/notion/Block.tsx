@@ -12,9 +12,9 @@ export default function Block({ block }: { block: BlockObjectResponse }) {
   switch (block.type) {
     case "paragraph":
       return (
-        <p>
+        <>
           <RichText text={block.paragraph.rich_text} />
-        </p>
+        </>
       );
     case "heading_1":
       return (

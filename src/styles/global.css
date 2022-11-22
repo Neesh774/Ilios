@@ -58,6 +58,17 @@ html {
     transform: translateY(0);
     transition: transform 0.1s ease-out;
   }
+
+  .imageContainer > span {
+    position: unset !important;
+  }
+
+  .nextImage {
+    object-fit: contain;
+    max-width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
 }
 
 ::-webkit-scrollbar {

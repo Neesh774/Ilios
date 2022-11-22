@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Carousel from "./Carousel";
 import Image from "../Image";
+import Button from "../Button";
 
 const Projects = ({
   featured,
@@ -289,6 +290,9 @@ const Projects = ({
         </h3>
         <Carousel projects={projects} />
       </div>
+      <Button className="w-40 mx-auto" onClick={() => router.push("/projects")}>
+        Take a look at the rest of my projects
+      </Button>
     </motion.div>
   );
 };
