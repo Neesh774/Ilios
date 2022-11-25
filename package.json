@@ -24,6 +24,9 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
+    "react-tsparticles": "^2.5.3",
+    "tsparticles": "^2.5.3",
+    "tsparticles-engine": "^2.5.2",
     "use-lanyard": "^1.2.0",
     "zod": "^3.19.1"
   },

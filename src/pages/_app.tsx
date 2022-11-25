@@ -6,6 +6,7 @@ import Head from "next/head";
 import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import NextNProgress from "nextjs-progressbar";
+import Snow from "../components/Snow";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +16,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/Favicon.png" />
       </Head>
       <main className="bg-background-800">
+        <Snow />
         <NextNProgress color="#ffca3a" />
         <Nav />
         <Component {...pageProps} />
