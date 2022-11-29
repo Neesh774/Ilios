@@ -25,6 +25,12 @@ const MetaTags = ({
       <meta name="twitter:image" content="/banner.png" />
 
       <link rel="icon" href="/favicon.ico" />
+
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1978358606488844"
+        crossOrigin="anonymous"
+      ></script>
     </Head>
   );
 };
