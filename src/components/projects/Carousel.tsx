@@ -57,7 +57,7 @@ const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
   };
 
   return (
-    <div className="w-full max-w-96 relative flex flex-col justify-center h-[28rem] lg:h-80">
+    <div className="w-full max-w-96 relative flex flex-col justify-center h-[28rem] lg:min-h-72 lg:max-h-96 text-left">
       <AnimatePresence initial={false} custom={direction}>
         <MotionProject
           key={page}
@@ -85,7 +85,7 @@ const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
           }}
         />
       </AnimatePresence>
-      <div className="flex flex-row gap-1 justify-center items-center mt-8 absolute bottom-0 left-0 right-0">
+      <div className="flex flex-row gap-1 justify-center items-center mt-8 absolute bottom-0 left-0 right-0 h-3">
         <Icon className="m-0 cursor-pointer">
           <FiChevronLeft onClick={() => paginate(-1)} />
         </Icon>

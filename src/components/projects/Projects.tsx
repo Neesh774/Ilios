@@ -124,7 +124,7 @@ const Projects = ({
       initial="hidden"
       variants={sectionVariants}
       whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: "some" }}
       className="flex flex-col gap-4 px-1 md:w-5/6 md:px-0 md:mx-auto"
       id="projects"
     >
@@ -207,7 +207,7 @@ const Projects = ({
                       variants={techParentVariants}
                       initial="hidden"
                       whileInView="show"
-                      viewport={{ amount: 0.7, once: true }}
+                      viewport={{ amount: "some", once: true }}
                       className={`flex md:flex-row flex-wrap gap-2 ${
                         i % 2 == 0 ? "justify-start" : "justify-end"
                       }`}
@@ -233,7 +233,7 @@ const Projects = ({
                       className="w-5/6 sm:w-2/3 mx-auto relative sm:top-8 object-cover md:hidden"
                       variants={imageVariants}
                       initial="hidden"
-                      viewport={{ once: true, amount: 0.4 }}
+                      viewport={{ once: true, amount: "some" }}
                       whileInView="show"
                       src={imageUrl}
                       alt={projectTitle}
@@ -281,7 +281,7 @@ const Projects = ({
           );
         })}
       </div>
-      <div className="bg-background-900 rounded-md justify-center items-center lg:mx-4 flex flex-col py-8 px-8 lg:px-16">
+      <div className="bg-background-900 rounded-md justify-center items-center text-center lg:mx-4 flex flex-col py-8 px-8 lg:px-16">
         <h1 className="text-text-300 font-semibold text-2xl">
           But wait, there's more!
         </h1>

@@ -5,7 +5,7 @@ import MetaTags from "../../components/MetaTags";
 import Block from "../../components/notion/Block";
 import { notionClient } from "../../utils/client";
 import { notionColor } from "../../utils/color";
-import formatTime from "../../utils/formatTime";
+import formatTime, { timeRange } from "../../utils/formatTime";
 import { Blog, Project } from "../../utils/types";
 import { FiArrowLeft, FiExternalLink, FiGithub } from "react-icons/fi";
 import RichText from "../../components/notion/RichText";
