@@ -73,34 +73,35 @@ const Contact = ({ activity }: { activity: Data | undefined }) => {
           setTimeout(() => setText("Send"), 3000);
         }}
       >
-        <label htmlFor="email" className="flex gap-1 flex-col">
+        <div className="flex gap-1 flex-col">
           <span className="select-none text-xs font-semibold uppercase tracking-wide text-highlight">
             Email Address
           </span>
-
-          <input
-            required
-            type="email"
-            name="email"
-            id="email"
-            className="block w-4/5 md:w-2/5 rounded-md text-text-300 bg-background-700 autofill:!bg-background-700 py-1 px-4 focus:outline-none focus:ring-2 focus:ring-highlight transition-all duration-400"
-          />
-        </label>
-
-        <label htmlFor="body" className="flex gap-1 flex-col">
+          <label htmlFor="email" className="w-4/5 md:w-2/5">
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              className="block w-full rounded-md text-text-300 bg-background-700 autofill:!bg-background-700 py-1 px-4 focus:outline-none focus:ring-2 focus:ring-highlight transition-all duration-400"
+            />
+          </label>
+        </div>
+        <div className="flex gap-1 flex-col">
           <span className="select-none text-xs font-semibold uppercase tracking-wide text-highlight">
             Your message
           </span>
-
-          <textarea
-            rows={5}
-            name="body"
-            minLength={10}
-            maxLength={500}
-            id="body"
-            className="block w-full resize-none text-text-300 rounded-md bg-background-700 py-1 px-4 focus:outline-none focus:ring-2 focus:ring-highlight transition-all duration-400"
-          />
-        </label>
+          <label htmlFor="body">
+            <textarea
+              rows={5}
+              name="body"
+              minLength={10}
+              maxLength={500}
+              id="body"
+              className="block w-full resize-none text-text-300 rounded-md bg-background-700 py-1 px-4 focus:outline-none focus:ring-2 focus:ring-highlight transition-all duration-400"
+            />
+          </label>
+        </div>
 
         <div className="flex flex-col md:flex-row gap-2 mt-4 items-start md:items-center justify-between">
           <Button>{text}</Button>

@@ -98,7 +98,7 @@ export type Project = {
                 start: string;
                 end: string;
             };
-        }
+        },
     },
     id: string;
 }

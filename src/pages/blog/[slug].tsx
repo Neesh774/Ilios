@@ -37,8 +37,9 @@ export default function BlogPage({
               {page.properties.Name.title[0].plain_text}
             </h1>
             <div className="flex flex-row flex-wrap gap-2">
-              {page.properties.Tags.multi_select.map((tag) => (
+              {page.properties.Tags.multi_select.map((tag, i) => (
                 <span
+                  key={i}
                   className="px-2 font-mono py-1 h-7 max-w-fit flex items-center bg-background-900 rounded-md text-sm"
                   style={{ color: notionColor(tag.color) }}
                 >

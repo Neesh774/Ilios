@@ -27,7 +27,7 @@ export default function BlogPage({
         description={page.properties.Description.rich_text[0].plain_text}
       />
       <div className="pb-4 pt-6 border-b-[1px] border-text-500 mb-96 md:mb-72 md:pt-8 lg:pb-6 lg:pt-28 xl:py-36 xl:pb-16 overflow-hidden min-h-[100vh]">
-        <div className="w-4/5 md:w-2/5 2xl:w-84 mx-auto flex flex-col gap-10 lg:gap-20">
+        <div className="w-4/5 md:w-2/5 2xl:w-84 mx-auto flex flex-col gap-10 lg:gap-12">
           <div className="flex flex-col gap-4">
             <div className="flex flex-row gap-2 text-highlight group">
               <FiArrowLeft className="group-hover:-translate-x-1 transition-all duration-100" />
@@ -35,7 +35,7 @@ export default function BlogPage({
                 Back to Projects
               </a>
             </div>
-            <div className="md:w-4/5">
+            <div className="md:w-4/5 hover:scale-[103%] transition-all duration-150">
               <Image
                 block={page.properties.Photo.files}
                 alt={page.properties.Name.title[0].plain_text}
@@ -43,12 +43,19 @@ export default function BlogPage({
             </div>
             <div className="flex flex-col md:flex-row md:justify-between gap-2 md:gap-0">
               <div className="flex flex-col gap-2">
-                <div className="text-sm text-highlight font-mono">
+                <div className="text-sm text-highlight font-mono flex flex-row gap-2">
                   {formatTime(page.properties.Date.date.start)}
+                  {page.properties.Date.date.end && (
+                    <>
+                      <span>&mdash;</span>
+                      {formatTime(page.properties.Date.date.end)}
+                    </>
+                  )}
                 </div>
                 <h1 className="text-4xl font-bold text-text-200">
                   {page.properties.Name.title[0].plain_text}
                 </h1>
+                <h3 className="text-lg font-semibold text-text-300">Tags</h3>
                 <div className="flex flex-row flex-wrap gap-2">
                   {page.properties.Technologies.multi_select.map((tag) => (
                     <span
@@ -59,6 +66,16 @@ export default function BlogPage({
                     </span>
                   ))}
                 </div>
+                <h3 className="text-lg font-semibold text-text-300">Status</h3>
+
+                <span
+                  className="px-2 font-mono py-1 h-7 max-w-fit flex items-center bg-background-900 rounded-md text-sm"
+                  style={{
+                    color: notionColor(page.properties.Status.select.color),
+                  }}
+                >
+                  {page.properties.Status.select.name}
+                </span>
               </div>
               <div className="flex flex-row gap-2 h-fit">
                 {page.properties.Github.url && (

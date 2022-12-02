@@ -17,7 +17,8 @@ export default function Image({
   return (
     <div
       className={`imageContainer w-full ${
-        isLoading && "bg-slate-200 dark:bg-zinc-800 animate-pulse rounded"
+        isLoading &&
+        "bg-slate-200 dark:bg-zinc-800 animate-pulse rounded max-h-20"
       }`}
     >
       <NextImage

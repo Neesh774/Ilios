@@ -239,13 +239,13 @@ const Projects = ({
                       alt={projectTitle}
                     />
                   </a>
-                  <p className="bg-background-700 shadow-lg text-text-300 font-body text-sm font-[500] px-6 py-4 min-h-fit sm:w-4/5 md:min-w-fit xl:max-w-3xl rounded-[.250rem] z-10">
+                  <div className="bg-background-700 shadow-lg text-text-300 font-body text-sm font-[500] px-6 py-4 min-h-fit sm:w-4/5 md:min-w-fit xl:max-w-3xl rounded-[.250rem] z-10">
                     {project.properties.Description.type == "rich_text" && (
                       <RichText
                         text={project.properties.Description.rich_text}
                       />
                     )}
-                  </p>
+                  </div>
                 </div>
                 <div className="flex flex-row gap-3">
                   {githubLink && (
