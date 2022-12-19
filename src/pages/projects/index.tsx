@@ -218,6 +218,12 @@ export const getServerSideProps: GetServerSideProps = async () => {
         property: "Date",
       },
     ],
+    filter: {
+      property: "Hidden",
+      checkbox: {
+        equals: false,
+      },
+    },
   });
   return {
     props: {

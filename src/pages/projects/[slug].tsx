@@ -116,6 +116,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
         property: "Date",
       },
     ],
+    filter: {
+      property: "Hidden",
+      checkbox: {
+        equals: false,
+      },
+    },
   })) as unknown as { results: Project[] };
   return {
     paths: projects.map((blog) => ({

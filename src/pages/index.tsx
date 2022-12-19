@@ -71,6 +71,12 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
             equals: "Finished",
           },
         },
+        {
+          property: "Hidden",
+          checkbox: {
+            equals: false,
+          },
+        },
       ],
     },
   });

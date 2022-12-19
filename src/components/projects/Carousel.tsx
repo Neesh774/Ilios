@@ -107,7 +107,9 @@ const Carousel = ({ projects }: { projects: PageObjectResponse[] }) => {
           ))}
         </div>
         <div className="flex lg:hidden">
-          <p className="text-highlight">{imageIndex + 1}</p>
+          <p className="text-highlight">
+            {imageIndex + 1}/{projects.length}
+          </p>
         </div>
         <Icon className="m-0 cursor-pointer">
           <FiChevronRight onClick={() => paginate(1)} />
