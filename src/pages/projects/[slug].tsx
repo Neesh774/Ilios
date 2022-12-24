@@ -129,8 +129,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slug: blog.properties.Name.title[0].plain_text,
       },
     })),
-    fallback: false,
-    revalidate: 10,
+    fallback: "blocking",
   };
 };
 
