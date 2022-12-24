@@ -75,7 +75,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         slug: blog.properties.Slug.rich_text[0].plain_text,
       },
     })),
-    fallback: false,
+    fallback: "blocking",
   };
 };
 
@@ -138,5 +138,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       page: blogs[0],
       blocks: blocksWithChildren,
     },
+    revalidate: 100,
   };
 };
