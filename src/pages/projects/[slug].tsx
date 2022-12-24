@@ -192,5 +192,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
       page: projects[0],
       blocks: blocksWithChildren,
     },
+    revalidate: 10,
   };
 };
