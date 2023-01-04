@@ -10,6 +10,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import Avatar from "../../public/pfp.png";
 import useMediaQuery from "../utils/useMediaQuery";
 
 const About = ({
@@ -133,7 +134,7 @@ const About = ({
                 transition={{ delay: 0.4 }}
                 viewport={{ once: true, amount: 0.6 }}
                 className="lg:w-64 lg:h-64 md:w-48 md:h-48 w-32 h-32 shadow-lg shadow-background-800/60 z-40 rounded-full"
-                src={`https://cdn.discordapp.com/avatars/${activity.discord_user.id}/${activity.discord_user.avatar}.png?size=256`}
+                src="/pfp.png"
               />
               {activity.spotify && (
                 <div className="flex flex-row items-center justify-center px-3 py-2 rounded-full bg-zinc-900/60 gap-2 text-sm z-50 max-w-md">

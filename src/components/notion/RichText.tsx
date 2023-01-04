@@ -19,7 +19,7 @@ export default function RichText({
             text.annotations.strikethrough ? "line-through " : ""
           }${text.annotations.underline ? "underline " : ""}${
             text.annotations.code
-              ? "bg-zinc-100 dark:bg-zinc-900 p-1 rounded"
+              ? "bg-zinc-900 px-1 font-mono text-text-400 py-0.5 rounded"
               : ""
           }${
             text.annotations.color
