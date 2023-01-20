@@ -7,6 +7,7 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import NextNProgress from "nextjs-progressbar";
 import Snow from "../components/Snow";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -22,6 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </main>
+      <Analytics />
     </>
   );
 }
