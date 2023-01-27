@@ -45,7 +45,7 @@ const Footer = () => {
             <Button onClick={() => router.push("/blog")}>
               Check out my blog
             </Button>
-            <Button>Resume</Button>
+            <Button onClick={() => router.push("/resume.pdf")}>Resume</Button>
           </div>
         </div>
       </div>
