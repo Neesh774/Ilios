@@ -63,10 +63,10 @@ const Hero = () => {
       </motion.h1>
       <motion.p
         variants={item}
-        className="text-text-300 md:w-3/5 md:text-xl font-body"
+        className="text-text-300 md:w-3/5 lg:w-4/5 md:text-xl font-body"
       >
-        I'm a {(new Date().getFullYear() - 2006).toString()} year old web
-        developer, and I love building awesome websites and apps.
+        I'm {(new Date().getFullYear() - 2006).toString()} years old, and I want
+        to use computers to build solutions to real-world problems.
       </motion.p>
       <motion.div
         variants={{

@@ -7,6 +7,7 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 import Carousel from "./Carousel";
 import Image from "../Image";
 import Button from "../Button";
+import { useState } from "react";
 
 const Projects = ({
   featured,
@@ -16,6 +17,7 @@ const Projects = ({
   projects: PageObjectResponse[];
 }) => {
   const router = useRouter();
+  const [imageHover, setImageHover] = useState(-1);
 
   const sectionVariants = {
     hidden: {
@@ -81,6 +83,7 @@ const Projects = ({
       },
     },
     hover: {
+      zIndex: 20,
       scale: 1.05,
       transition: {
         type: "spring",
@@ -125,7 +128,7 @@ const Projects = ({
       variants={sectionVariants}
       whileInView="show"
       viewport={{ once: true, amount: "some" }}
-      className="flex flex-col gap-4 px-1 md:w-5/6 md:px-0 md:mx-auto"
+      className="flex flex-col gap-4 px-1 w-full md:px-0 md:mx-auto"
       id="projects"
     >
       <motion.div variants={childVariants} className="flex flex-col pl-8 mb-4">
@@ -186,16 +189,12 @@ const Projects = ({
                     Featured
                   </span>
                   <div
-                    className={`flex md:items-center md:justify-center gap-2 ${
-                      i % 2 == 0
-                        ? "flex-col md:flex-row items-start"
-                        : "flex-col md:flex-row-reverse items-end"
+                    className={`flex md:justify-center gap-2 ${
+                      i % 2 == 0 ? "flex-col items-start" : "flex-col items-end"
                     }`}
                   >
                     <h2
-                      className={`font-text font-bold text-3xl text-secondary-100 ${
-                        i % 2 == 0 ? "mr-4" : "ml-4"
-                      }`}
+                      className={`font-text font-bold text-3xl text-secondary-100`}
                     >
                       <a href={link}>
                         {project.properties.Name.type == "title" && (
@@ -230,7 +229,7 @@ const Projects = ({
                 <div className="flex flex-col justify-center items-center md:contents">
                   <a href={link}>
                     <motion.img
-                      className="w-5/6 sm:w-2/3 mx-auto relative sm:top-8 object-cover md:hidden"
+                      className="sm:w-2/3 w-5/6 mx-auto relative sm:top-8 object-cover md:hidden"
                       variants={imageVariants}
                       initial="hidden"
                       viewport={{ once: true, amount: "some" }}
@@ -239,7 +238,11 @@ const Projects = ({
                       alt={projectTitle}
                     />
                   </a>
-                  <div className="bg-background-700 shadow-lg text-text-300 font-body text-sm font-[500] px-6 py-4 min-h-fit sm:w-4/5 md:min-w-fit xl:max-w-3xl rounded-[.250rem] z-10">
+                  <div
+                    className={`bg-background-700 shadow-lg text-text-300 font-body text-sm font-[500] px-6 py-4 min-h-fit sm:w-4/5 md:w-5/6 xl:max-w-3xl rounded-[.250rem] z-10 transition-all duration-200 ${
+                      imageHover != i ? "opacity-100" : "opacity-20"
+                    }`}
+                  >
                     {project.properties.Description.type == "rich_text" && (
                       <RichText
                         text={project.properties.Description.rich_text}
@@ -273,6 +276,8 @@ const Projects = ({
                   viewport={{ once: true, amount: 0.4 }}
                   whileInView="show"
                   whileHover="hover"
+                  onHoverStart={() => setImageHover(i)}
+                  onHoverEnd={() => setImageHover(-1)}
                   src={imageUrl}
                   alt={projectTitle}
                 />
@@ -281,7 +286,7 @@ const Projects = ({
           );
         })}
       </div>
-      <div className="bg-background-900 rounded-md justify-center items-center text-center lg:mx-4 flex flex-col py-8 px-8 lg:px-16">
+      <div className="bg-background-900 rounded-md justify-center items-center text-center mx-4 lg:mx-0 flex flex-col py-8 px-4 lg:px-8">
         <h1 className="text-text-300 font-semibold text-2xl">
           But wait, there's more!
         </h1>

@@ -12,6 +12,7 @@ import {
 } from "react-icons/si";
 import Avatar from "../../public/pfp.png";
 import useMediaQuery from "../utils/useMediaQuery";
+import { useState } from "react";
 
 const About = ({
   bodyArea,
@@ -21,6 +22,9 @@ const About = ({
   activity: Data | undefined;
 }) => {
   const matches = useMediaQuery("(min-width: 768px)");
+  const [avatarState, setAvatarState] = useState<"idle" | "hover" | "drag">(
+    "idle"
+  );
 
   const sectionVariants = {
     hidden: {
@@ -83,7 +87,7 @@ const About = ({
               <span className="font-bold">About Me</span>
             </h1>
             <h3 className="text-text-500 flex flex-row gap-1 text-xl font-semibold">
-              Welcome to Ilios.
+              Welcome to my website.
             </h3>
           </motion.div>
           <motion.p
@@ -124,20 +128,53 @@ const About = ({
         <div className="flex justify-center items-center px-4 lg:w-1/2 lg:px-0">
           {activity && (
             <div className="flex flex-col gap-4 justify-center items-center">
-              <motion.img
+              <motion.div
                 drag
                 dragConstraints={bodyArea}
-                whileDrag={{ scale: 1.1 }}
                 dragElastic={0.05}
+                onHoverStart={() =>
+                  avatarState == "idle" ? setAvatarState("hover") : null
+                }
+                onDrag={() => setAvatarState("drag")}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
                 viewport={{ once: true, amount: 0.6 }}
-                className="lg:w-64 lg:h-64 md:w-48 md:h-48 w-32 h-32 shadow-lg shadow-background-800/60 z-40 rounded-full"
-                src="/pfp.png"
-              />
+                className="lg:w-64 lg:h-64 md:w-48 md:h-48 w-32 h-32 shadow-lg shadow-background-800/60 z-40 cursor-pointer relative"
+                whileHover={{
+                  // wiggle
+                  rotate: [2, -2, 2],
+                  scale: 0.9,
+                  transition: {
+                    default: {
+                      duration: 0.5,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    },
+                    scale: {
+                      duration: 0.3,
+                      ease: "easeInOut",
+                    },
+                  },
+                }}
+              >
+                {avatarState == "hover" && (
+                  <motion.span
+                    initial={{ translateY: 40, rotateZ: 40 }}
+                    animate={{ translateY: 0, rotateZ: 0 }}
+                    transition={{ duration: 0.4, type: "spring", bounce: 0.4 }}
+                    className="absolute -top-12 left-[40%] transform origin-bottom-left -z-50 bg-background-600 font-mono text-highlight text-xs rounded-full p-3"
+                  >
+                    Try dragging me!
+                  </motion.span>
+                )}
+                <img
+                  src="/pfp.png"
+                  className="w-full h-full rounded-full pointer-events-none z-20"
+                />
+              </motion.div>
+
               {activity.spotify && (
-                <div className="flex flex-row items-center justify-center px-3 py-2 rounded-full bg-zinc-900/60 gap-2 text-sm z-50 max-w-md">
+                <div className="flex flex-row pointer-events-none items-center justify-center px-3 py-2 rounded-full bg-zinc-900/60 gap-2 text-sm z-50 max-w-md">
                   <img
                     src={activity.spotify.album_art_url}
                     className="md:w-12 md:h-12 w-10 h-10 rounded-full border-[#1db954] border-2"
