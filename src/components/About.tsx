@@ -139,11 +139,11 @@ const About = ({
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true, amount: 0.6 }}
-                className="lg:w-64 lg:h-64 md:w-48 md:h-48 w-32 h-32 shadow-lg shadow-background-800/60 z-40 cursor-pointer relative"
+                className="lg:w-64 lg:h-64 md:w-48 md:h-48 w-32 h-32 shadow-lg shadow-background-800/60 rounded-full z-40 cursor-pointer relative"
                 whileHover={{
                   // wiggle
                   rotate: [2, -2, 2],
-                  scale: 0.9,
+                  scale: 1.1,
                   transition: {
                     default: {
                       duration: 0.5,
