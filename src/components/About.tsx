@@ -98,8 +98,11 @@ const About = ({
             school. I love to create things, and I'm passionate about web
             development. I'm currently working on a few projects, and I'm always
             looking for new opportunities to learn and grow. Most recently, I
-            helped organize{" "}
-            <Link href="https://hacks.buildergroop.com">a hackathon</Link>.
+            won first place at{" "}
+            <Link href="https://spectacle.hackmit.org/project/30/">
+              a hackathon called Blueprint at MIT
+            </Link>
+            .
           </motion.p>
           <motion.p
             variants={childVariants}
