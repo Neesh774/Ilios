@@ -41,8 +41,6 @@ const Projects = ({
       opacity: 1,
       translateY: 0,
       transition: {
-        type: "spring",
-        bounce: 0.7,
         velocity: 30,
       },
     },
@@ -52,16 +50,13 @@ const Projects = ({
     hidden: (custom: number) => ({
       opacity: 0,
       translateY: 60,
-      rotate: custom == 1 ? -4 : 4,
     }),
     show: {
       opacity: 1,
       translateY: 0,
-      rotate: 0,
       transition: {
-        type: "spring",
-        bounce: 0.7,
         velocity: 30,
+        duration: 0.8,
       },
     },
   };
@@ -75,8 +70,6 @@ const Projects = ({
       opacity: 1,
       rotateX: 0,
       transition: {
-        type: "spring",
-        bounce: 0.7,
         velocity: 30,
         delay: 0.8,
         duration: 0.8,
@@ -127,7 +120,7 @@ const Projects = ({
       initial="hidden"
       variants={sectionVariants}
       whileInView="show"
-      viewport={{ once: true, amount: "some" }}
+      viewport={{ once: true, amount: 0.3 }}
       className="flex flex-col gap-4 px-1 w-full md:px-0 md:mx-auto"
       id="projects"
     >
@@ -173,7 +166,7 @@ const Projects = ({
               key={i}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, amount: "some" }}
+              viewport={{ once: true, amount: 0.3 }}
               variants={projectVariants}
               className={`flex mb-20 md:mb-44 relative ${
                 i % 2 == 0 ? "flex-row" : "flex-row-reverse"
@@ -232,7 +225,7 @@ const Projects = ({
                       className="sm:w-2/3 w-5/6 mx-auto relative sm:top-8 object-cover md:hidden"
                       variants={imageVariants}
                       initial="hidden"
-                      viewport={{ once: true, amount: "some" }}
+                      viewport={{ once: true, amount: 0.3 }}
                       whileInView="show"
                       src={imageUrl}
                       alt={projectTitle}

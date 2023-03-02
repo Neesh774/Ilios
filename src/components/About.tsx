@@ -42,17 +42,14 @@ const About = ({
   const childVariants = {
     hidden: {
       opacity: 0,
-      translateY: 60,
-      rotate: matches ? 4 : 0,
+      translateY: 40,
     },
     show: {
       opacity: 1,
       translateY: 0,
-      rotate: 0,
       transition: {
-        type: "spring",
-        bounce: 0.7,
         velocity: 30,
+        duration: 0.6,
       },
     },
   };
@@ -165,7 +162,7 @@ const About = ({
                     initial={{ translateY: 40, rotateZ: 40 }}
                     animate={{ translateY: 0, rotateZ: 0 }}
                     transition={{ duration: 0.4, type: "spring", bounce: 0.4 }}
-                    className="absolute -top-12 left-[40%] transform origin-bottom-left -z-50 bg-background-600 font-mono text-highlight text-xs rounded-full p-3"
+                    className="absolute -top-8 left-[40%] transform origin-bottom-left -z-50 bg-background-600 font-mono text-highlight text-xs rounded-md px-2 py-1"
                   >
                     Try dragging me!
                   </motion.span>

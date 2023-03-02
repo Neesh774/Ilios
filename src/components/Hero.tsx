@@ -14,9 +14,8 @@ const Hero = () => {
       translateY: 0,
       opacity: 1,
       transition: {
-        type: "spring",
-        bounce: 1,
         velocity: 30,
+        duration: 0.6,
       },
     },
   };

@@ -128,6 +128,7 @@ export default function Projects({ projects }: { projects: ProjectType[] }) {
                   <motion.div
                     variants={row}
                     custom={i}
+                    key={i}
                     animate="show"
                     initial="hidden"
                     className="rounded-lg py-2 bg-transparent grid grid-cols-6 cursor-pointer opacity-60 scale-100 hover:!opacity-100 hover:!scale-105 transition-all hover:duration-100 duration-300"

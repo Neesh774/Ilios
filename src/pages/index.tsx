@@ -1,15 +1,18 @@
 import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { GetServerSideProps } from "next";
-import { useRef } from "react";
-import About from "../components/About";
+import { GetServerSideProps, GetStaticProps } from "next";
+import { useEffect, useRef, useState } from "react";
+// import About from "../components/About";
 import Hero from "../components/Hero";
 import MetaTags from "../components/MetaTags";
-import Nav from "../components/Nav";
-import Projects from "../components/projects/Projects";
+// import Nav from "../components/Nav";
+// import Projects from "../components/projects/Projects";
 import { notionClient } from "../utils/client";
-import Contact from "../components/Contact";
+// import Contact from "../components/Contact";
 import { useLanyard } from "use-lanyard";
-import Footer from "../components/Footer";
+import Projects from "../components/projects/Projects";
+import About from "../components/About";
+import Contact from "../components/Contact";
+// import Footer from "../components/Footer";
 
 const IndexPage = ({
   featured,
@@ -44,7 +47,7 @@ const IndexPage = ({
 
 export default IndexPage;
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const { results: featured } = await notionClient.databases.query({
     database_id: process.env.NOTION_PROJECTS_ID as string,
     filter: {
@@ -81,6 +84,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   });
   return {
+    revalidate: 60 * 60 * 24,
     props: {
       featured,
       projects,
