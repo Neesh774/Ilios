@@ -94,12 +94,8 @@ const About = ({
             Hey there! My name is Kanishq, and I'm currently a senior in high
             school. I love to create things, and I'm passionate about web
             development. I'm currently working on a few projects, and I'm always
-            looking for new opportunities to learn and grow. Most recently, I
-            won first place at{" "}
-            <Link href="https://spectacle.hackmit.org/project/30/">
-              a hackathon called Blueprint at MIT
-            </Link>
-            .
+            looking for new opportunities to learn and grow. Right now, I&apos;m
+            working as an intern at <Link href="https://subset.so">Subset</Link>.
           </motion.p>
           <motion.p
             variants={childVariants}
