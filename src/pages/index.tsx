@@ -28,10 +28,7 @@ const IndexPage = ({
 
   return (
     <>
-      <MetaTags
-        title="Kanishq Kancharla"
-        description="Welcome to Ilios Labs."
-      />
+      <MetaTags title="Kanishq Kancharla" description="Welcome to my domain." />
       <div
         className="pb-12 xl:pt-20 px-8 border-b-[1px] border-text-500 mb-96 md:mb-72 md:pb-12 md:pt-36 md:px-24 lg:pb-16 lg:pt-32 lg:px-36 xl:py-72 xl:px-60 2xl:px-[20%] flex flex-col gap-40 overflow-hidden"
         ref={bodyArea}

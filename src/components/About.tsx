@@ -95,7 +95,8 @@ const About = ({
             school. I love to create things, and I'm passionate about web
             development. I'm currently working on a few projects, and I'm always
             looking for new opportunities to learn and grow. Right now, I&apos;m
-            working as an intern at <Link href="https://subset.so">Subset</Link>.
+            working as an intern at <Link href="https://subset.so">Subset</Link>
+            .
           </motion.p>
           <motion.p
             variants={childVariants}
@@ -103,8 +104,8 @@ const About = ({
           >
             I focus on creating projects that are actually useful and help
             people like{" "}
-            <Link href="https://bubble.ilioslabs.dev">this website</Link> to
-            help me keep notes on my computer, but I also make cool things like{" "}
+            <Link href="https://bubble.neesh.page">this website</Link> to help
+            me keep notes on my computer, but I also make cool things like{" "}
             <Link href="https://github.com/Neesh774/Scholar">this program</Link>
             to keep me up-to-date with my assignments. Here are some of the
             technologies I've been working with recently:

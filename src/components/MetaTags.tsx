@@ -14,7 +14,7 @@ const MetaTags = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://ilioslabs.dev" />
+      <meta property="og:url" content="https://neesh.page" />
       <meta property="og:site_name" content="Ilios" />
       <meta property="og:image" content="/banner.png" />
       <meta property="og:locale" content="en_US" />
