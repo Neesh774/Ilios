@@ -9,6 +9,7 @@ import {
   SiSvelte,
   SiTailwindcss,
   SiTypescript,
+  SiSwift,
 } from "react-icons/si";
 import Avatar from "../../public/pfp.png";
 import useMediaQuery from "../utils/useMediaQuery";
@@ -59,7 +60,7 @@ const About = ({
     { name: "Typescript", icon: <SiTypescript /> },
     { name: "React", icon: <SiReact /> },
     { name: "Python", icon: <SiPython /> },
-    { name: "Svelte", icon: <SiSvelte /> },
+    { name: "SwiftUI", icon: <SiSwift /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss /> },
   ];
 
@@ -91,12 +92,14 @@ const About = ({
             variants={childVariants}
             className="text-zinc-400 text-[0.9rem] md:text-[1.06rem] font-body"
           >
-            Hey there! My name is Kanishq, and I'm currently a senior in high
-            school. I love to create things, and I'm passionate about web
-            development. I'm currently working on a few projects, and I'm always
-            looking for new opportunities to learn and grow. Right now, I&apos;m
-            working as an intern at <Link href="https://subset.so">Subset</Link>
-            .
+            Hey there! My name is Kanishq, and I'm a 17 y/o CS student /
+            frontend engineer / coffee enthusiast. While I'm not playing tennis
+            or Overwatch, I love to build things that live on the internet while
+            listening to music at dangerously high volumes. I'm based in Boston,
+            so{" "}
+            <Link href="#contact">
+              let me know if you have any cafe recommendations!
+            </Link>
           </motion.p>
           <motion.p
             variants={childVariants}
@@ -105,10 +108,10 @@ const About = ({
             I focus on creating projects that are actually useful and help
             people like{" "}
             <Link href="https://bubble.neesh.page">this website</Link> to help
-            me keep notes on my computer, but I also make cool things like{" "}
-            <Link href="https://github.com/Neesh774/Scholar">this program</Link>
-            to keep me up-to-date with my assignments. Here are some of the
-            technologies I've been working with recently:
+            me make quick notes, but I also make cool things like{" "}
+            <Link href="https://figwig.app">FigWig</Link>
+            to keep track of your Figma activity. Check out the tools I've been
+            using lately:
           </motion.p>
           <motion.div
             variants={childVariants}
@@ -165,7 +168,7 @@ const About = ({
                   </motion.span>
                 )}
                 <img
-                  src="/pfp.png"
+                  src="/pfp.jpeg"
                   className="w-full h-full rounded-full pointer-events-none z-20"
                 />
               </motion.div>
