@@ -22,7 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
         <Footer />
       </main>
-      {/* <Analytics /> */}
+      <Analytics />
     </>
   );
 }
