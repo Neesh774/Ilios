@@ -96,10 +96,8 @@ const About = ({
             frontend engineer. While I'm not playing tennis or drinking coffee,
             I love to build things that live on the internet while listening to
             music at dangerously high volumes. I'm a freshman at Northeastern in
-            Boston, so{" "}
-            <Link href="#contact">
-              let me know if you have any cafe recommendations!
-            </Link>
+            Boston, so <Link href="#contact">let me know</Link> if you have any
+            cafe recommendations!
           </motion.p>
           <motion.p
             variants={childVariants}

@@ -2,3 +2,5 @@ node_modules/
 src/gatsby-types.d.ts
 .next
 .env
+.vercel
+.env*.local
