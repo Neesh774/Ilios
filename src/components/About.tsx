@@ -93,10 +93,10 @@ const About = ({
             className="text-zinc-400 text-[0.9rem] md:text-[1.06rem] font-body"
           >
             Hey there! My name is Kanishq, and I'm a 17 y/o CS student /
-            frontend engineer / coffee enthusiast. While I'm not playing tennis
-            or Overwatch, I love to build things that live on the internet while
-            listening to music at dangerously high volumes. I'm based in Boston,
-            so{" "}
+            frontend engineer. While I'm not playing tennis or drinking coffee,
+            I love to build things that live on the internet while listening to
+            music at dangerously high volumes. I'm a freshman at Northeastern in
+            Boston, so{" "}
             <Link href="#contact">
               let me know if you have any cafe recommendations!
             </Link>
