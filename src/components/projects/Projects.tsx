@@ -120,7 +120,7 @@ const Projects = ({
       initial="hidden"
       variants={sectionVariants}
       whileInView="show"
-      viewport={{ once: true, amount: 0.3 }}
+      viewport={{ once: true, amount: "some" }}
       className="flex flex-col gap-4 px-1 w-full md:px-0 md:mx-auto"
       id="projects"
     >

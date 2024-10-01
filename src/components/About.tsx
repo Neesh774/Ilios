@@ -92,36 +92,27 @@ const About = ({
             variants={childVariants}
             className="text-zinc-400 text-[0.9rem] md:text-[1.06rem] font-body"
           >
-            Hey there! My name is Kanishq, and I'm a 17 y/o CS student /
-            frontend engineer. While I'm not playing tennis or drinking coffee,
-            I love to build things that live on the internet while listening to
-            music at dangerously high volumes. I'm a freshman at Northeastern in
-            Boston, so <Link href="#contact">let me know</Link> if you have any
-            cafe recommendations!
+            Hey there! I’m Neesh. Welcome to my little corner of the internet.
+            I’m a frontend engineer, and I focus on building unique intuitive
+            interfaces and user-centric digital experiences that, well, make
+            websites more interesting.
           </motion.p>
           <motion.p
             variants={childVariants}
             className="text-zinc-400 text-[0.9rem] md:text-[1.06rem] font-body"
           >
-            I focus on creating projects that are actually useful and help
-            people like{" "}
-            <Link href="https://bubble.neesh.page">this website</Link> to help
-            me make quick notes, but I also make cool things like{" "}
-            <Link href="https://figwig.app">FigWig</Link>
-            to keep track of your Figma activity. Check out the tools I've been
-            using lately:
+            I’m also a sophomore at Northeastern University, studying computer
+            science with a concentration in human-centered computing.
           </motion.p>
-          <motion.div
+          <motion.p
             variants={childVariants}
-            className="grid grid-rows-3 grid-flow-col gap-4 font-mono px-6 text-xs md:text-sm"
+            className="text-zinc-400 text-[0.9rem] md:text-[1.06rem] font-body"
           >
-            {technologies.map((tech, i) => (
-              <div className="flex flex-row gap-2 items-center" key={i}>
-                <div className="text-secondary-300">{tech.icon}</div>
-                <div className="text-zinc-400">{tech.name}</div>
-              </div>
-            ))}
-          </motion.div>
+            Right now, I’m working part-time for{" "}
+            <Link href="https://corner.inc">Corner</Link>, but I’m looking for a
+            full-time co-op this spring. If you think we would be a good fit,
+            <Link href="#contact">let me know</Link>.
+          </motion.p>
         </motion.div>
         <div className="flex justify-center items-center px-4 lg:w-1/2 lg:px-0">
           {activity && (
@@ -167,7 +158,7 @@ const About = ({
                 )}
                 <img
                   src="/pfp.jpeg"
-                  className="w-full h-full rounded-full pointer-events-none z-20"
+                  className="w-full h-full rounded-full pointer-events-none z-20 object-cover"
                 />
               </motion.div>
 

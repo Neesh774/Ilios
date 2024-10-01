@@ -105,26 +105,6 @@ const Contact = ({ activity }: { activity: Data | undefined }) => {
 
         <div className="flex flex-col md:flex-row gap-2 mt-4 items-start md:items-center justify-between">
           <Button>{text}</Button>
-          {activity && (
-            <a
-              href={`https://discord.com/users/${
-                process.env.NEXT_PUBLIC_DISCORD_ID as string
-              }`}
-              className="border-b-2 border-spacing-0 border-text-300 text-text-400 pb-1 hover:border-[#4E5AF0] hover:text-text-100 transition-all duration-500 group"
-            >
-              <span className="flex flex-row font-mono text-xs md:text-sm items-center">
-                I'm currently
-                <div className="flex flex-row gap-2 items-center px-2 py-0.5 bg-[#36393D] rounded-full mx-2 group-hover:bg-[#4E5AF0]transition-all duration-100">
-                  <img
-                    src={`/${activity?.discord_status}.png`}
-                    className="w-3 h-3"
-                  />
-                  {activity?.discord_status}
-                </div>
-                on Discord
-              </span>
-            </a>
-          )}
         </div>
       </form>
     </div>

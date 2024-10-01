@@ -58,14 +58,14 @@ const Hero = () => {
         variants={item}
         className="font-serif text-text-200/70 text-3xl lg:text-5xl xl:text-7xl font-semibold"
       >
-        I'm a web developer.
+        I'm a frontend engineer.
       </motion.h1>
       <motion.p
         variants={item}
         className="text-text-300 md:w-3/5 lg:w-4/5 md:text-xl font-body"
       >
-        I'm {(new Date().getFullYear() - 2006).toString()} years old, and I want
-        to use computers to build solutions to real-world problems.
+        I'm {(new Date().getFullYear() - 2006).toString()} years old, and I
+        build digital experiences.
       </motion.p>
       <motion.div
         variants={{

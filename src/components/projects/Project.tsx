@@ -48,7 +48,7 @@ const Project = forwardRef(
         </div>
         <div className="flex flex-col lg:max-w-[50%] flex-grow p-4 gap-2 justify-between h-fit lg:h-auto">
           <div>
-            <h2 className="font-bold text-xl text-secondary-100">
+            <h2 className="font-bold text-xl text-secondary-100 underline">
               <a href={link}>{projectTitle}</a>
             </h2>
             <div className="text-text-400 text-sm">
