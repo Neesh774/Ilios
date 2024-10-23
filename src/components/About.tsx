@@ -94,8 +94,8 @@ const About = ({
           >
             Hey there! I’m Neesh. Welcome to my little corner of the internet.
             I’m a frontend engineer, and I focus on building unique intuitive
-            interfaces and user-centric digital experiences that, well, make
-            websites more interesting.
+            interfaces and user-centric digital experiences that make
+            websites <Link href="https://linear.app/quality/03">surprisingly great</Link>.
           </motion.p>
           <motion.p
             variants={childVariants}
